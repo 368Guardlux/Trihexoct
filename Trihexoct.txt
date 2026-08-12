@@ -1,9 +1,9 @@
 [Trihexoct]
-! Title: Trihexoct Omega (30-Layer Singularity Edition)
+! Title: Trihexoct
 ! Homepage: https://github.com/lomibaobalong-png/Trihexoct
 ! Author: lomibaobalong-png
 ! Expires: 1 hour
-! Version: 9.0.0
+! Version: 1.1.0
 ! Last modified: 11 Aug 2026
 ! Description: The ultimate 30-layer heuristic firewall. Features regex pattern matching, hardware fingerprint spoofing, WebUSB blocking, Service Worker quarantines, and AMP detours.
 !-------------------------------------------------------------------------------
@@ -1483,3 +1483,4 @@ $removeparam=usqp
 *##+js(abort-on-property-read, document.fonts.ready)
 *##+js(csp, script-src 'self' 'unsafe-eval' https://*.google.com https://*.youtube.com)
 *##+js(csp, connect-src 'self' https://*.api.yoursite.com)
+!-------------------------------------------------------------------------------
