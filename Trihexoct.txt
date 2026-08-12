@@ -8,9 +8,7 @@
 ! Description: The ultimate 30-layer heuristic firewall. Features regex pattern matching, hardware fingerprint spoofing, WebUSB blocking, Service Worker quarantines, and AMP detours.
 !-------------------------------------------------------------------------------
 
-! ==============================================================================
 ! 1. OMNI-URL TRACKING PARAMETER STRIPPING
-! ==============================================================================
 $removeparam=utm_source
 $removeparam=utm_medium
 $removeparam=utm_campaign
@@ -40,9 +38,7 @@ $removeparam=cmpid
 $removeparam=zanpid
 $removeparam=obOrigUrl
 
-! ==============================================================================
 ! 2. ENTERPRISE TELEMETRY, ANALYTICS & CNAME CLOAKING
-! ==============================================================================
 ||telemetry.*^$third-party
 ||analytics.*^$third-party
 ||metrics.*^$third-party
@@ -65,9 +61,7 @@ $removeparam=obOrigUrl
 ||appsflyer.com^$third-party
 ||adjust.com^$third-party
 
-! ==============================================================================
 ! 3. AGGRESSIVE ANTI-FINGERPRINTING & SESSION REPLAY
-! ==============================================================================
 ||fpjs.io^$third-party,script
 ||fingerprintjs.com^$third-party,script
 ||mouseflow.com^$third-party
@@ -78,9 +72,7 @@ $removeparam=obOrigUrl
 ||contentsquare.net^$third-party
 ||crazyegg.com^$third-party
 
-! ==============================================================================
 ! 4. OMNI-AI DATA HARVESTING & LLM TELEMETRY DEFENSE
-! ==============================================================================
 ||chatgpt.com/backend-api/lat/serve^$xhr
 ||platform.openai.com/v1/telemetry^$xhr
 ||oaistatic.com/telemetry^$third-party
@@ -94,9 +86,7 @@ $removeparam=obOrigUrl
 ||api.midjourney.com/telemetry^$xhr
 ||stability.ai/metrics^$xhr
 
-! ==============================================================================
 ! 5. HARDENED ANTI-ADBLOCK & PAYWALL DEFUSION
-! ==============================================================================
 ||fundingchoicesmessages.google.com^$third-party
 ||blockadblock.com^$third-party
 ||adblockanalytics.com^$third-party
@@ -111,9 +101,7 @@ $removeparam=obOrigUrl
 ##.tp-modal
 ##div[id^="zephr-"]
 
-! ==============================================================================
 ! 6. ABSOLUTE ANNOYANCE, MODAL & POP-UP PURGE
-! ==============================================================================
 ##[id*="cookie-banner" i]
 ##[class*="cookie-banner" i]
 ##[id*="newsletter" i]
@@ -129,9 +117,7 @@ $removeparam=obOrigUrl
 ##.web-push-prompt
 ##[id^="onesignal-popover-container"]
 
-! ==============================================================================
 ! 7. FLOATING VIDEO & STICKY HEADER ANNIHILATION
-! ==============================================================================
 ##.video-sticky
 ##.floating-video
 ##[class*="outstream-video"]
@@ -139,9 +125,7 @@ $removeparam=obOrigUrl
 ##.vjs-floating
 ##[id*="sticky-player"]
 
-! ==============================================================================
 ! 8. SOCIAL MEDIA CONTAINMENT & COMMENT SCRUBBING
-! ==============================================================================
 ##.fb-page
 ##.twitter-timeline
 ##[data-pin-do]
@@ -152,9 +136,7 @@ $removeparam=obOrigUrl
 ##iframe[src*="instagram.com/embed"]
 ###disqus_thread
 
-! ==============================================================================
 ! 9. MULTI-LINGUAL PROCEDURAL AD & CHUMBOX ERADICATION
-! ==============================================================================
 ##div:has-text(/^Advertisement$/i)
 ##div:has-text(/^Sponsored$/i)
 ##article:has-text(/Promoted/i)
@@ -174,9 +156,7 @@ $removeparam=obOrigUrl
 ##[id^="rc-widget-"]
 ##.plista-widget
 
-! ==============================================================================
 ! 10. ADVANCED SECURITY & MALICIOUS SCRIPT BLOCKING
-! ==============================================================================
 ||coin-hive.com^$third-party
 ||minemytraffic.com^$third-party
 ||browsermine.com^$third-party
@@ -184,9 +164,7 @@ $removeparam=obOrigUrl
 ||webminepool.com^$third-party
 /cryptonight.wasm$third-party
 
-! ==============================================================================
 ! 11. DYNAMIC DOM CLEANUP
-! ==============================================================================
 ##div[id^="ad-"]:empty
 ##div[class^="ad-"]:empty
 ##aside[class*="advertisement"]:empty
@@ -194,9 +172,7 @@ $removeparam=obOrigUrl
 ##.banner-ad:empty
 ##iframe:empty
 
-! ==============================================================================
 ! 12. ALGORITHMIC SCRIPTLET INJECTION & API MOCKING
-! ==============================================================================
 *##+js(set, _bypassed, true)
 *##+js(set, window.adblockDetected, false)
 *##+js(set, hasAdBlocker, false)
@@ -205,140 +181,231 @@ $removeparam=obOrigUrl
 *##+js(abort-on-property-read, Document.prototype.cookie)
 *##+js(abort-current-inline-script, Document.prototype.createElement, ad)
 
-! ==============================================================================
 ! 13. XPATH STRUCTURAL HEURISTICS
-! ==============================================================================
 #?#//div[contains(@class, 'post') and .//span[text()='Sponsored']]
 #?#//div[starts-with(@id, 'google_ads_iframe')]
 #?#//aside[descendant::text()[contains(., 'Advertisement')]]
 
-! ==============================================================================
 ! 14. NETWORK-LEVEL BEACON & PING ANNIHILATION
-! ==============================================================================
 *$ping,third-party
 *$beacon,third-party
 
-! ==============================================================================
 ! 15. JSON & XML API PAYLOAD MUTILATION (json-prune)
-! ==============================================================================
 *##+js(json-prune, ads sponsored_posts promotions)
 *##+js(json-prune, data.advertisements)
 *##+js(json-prune, config.telemetry)
 
-! ==============================================================================
 ! 16. CONTENT SECURITY POLICY (CSP) INJECTION
-! ==============================================================================
 ||$csp=worker-src 'none',domain=taboola.com|outbrain.com
 ||$csp=script-src 'self',domain=malicious-example.com
 
-! ==============================================================================
 ! 17. POPUNDER, TAB-HIJACK & WINDOW-OPEN QUARANTINE
-! ==============================================================================
 *$popunder,third-party
 *$popup,third-party,domain=~youtube.com|~github.com
 
-! ==============================================================================
 ! 18. WEBRTC, STUN/TURN & IP-LEAK BLOCKS
-! ==============================================================================
 ||stun.*^$third-party
 ||turn.*^$third-party
 ||webrtc.*^$third-party
 
-! ==============================================================================
 ! 19. ANTI-PAYWALL CSS OVERRIDES (Scroll Restoration)
-! ==============================================================================
 *##body:style(overflow: visible !important; position: static !important;)
 *##html:style(overflow: visible !important;)
 ##[class*="paywall"] ~ *:style(filter: none !important; opacity: 1 !important; display: block !important;)
 ##.blurred-content:style(filter: none !important;)
 
-! ==============================================================================
 ! 20. SHADOW DOM PIERCING & OBFUSCATED AD REMOVAL
-! ==============================================================================
 ##:host-context(article) .sponsored
 ##:host(.ad-container) > div
 ##:host-context(main) [class*="native-ad"]
 
-! ==============================================================================
 ! 21. MICRO-PIXEL & TRACKING FONT ERADICATION
-! ==============================================================================
 *\.gif?*tracking*$image,third-party
 *\.png?*pixel*$image,third-party
 ||fonts.googleapis.com/css?*family=Oswald$third-party
 *$font,third-party,domain=trackingsite.com
 
-! ==============================================================================
 ! 22. REGULAR EXPRESSION (REGEX) DEEP PACKET MATCHING
-! ==============================================================================
-! Instantly blocks millions of dynamically generated tracking URLs by matching 
-! the mathematical string structure of the URL rather than a specific domain.
 /^https?:\/\/(www\.)?([a-zA-Z0-9-]+\.)*(ad|track|stat|pixel|click)s?\.[a-z]{2,}/$third-party,xmlhttprequest
 /^https?:\/\/.*\/api\/v[0-9]+\/events?/$third-party
 
-! ==============================================================================
 ! 23. SERVICE WORKER & BACKGROUND SYNC QUARANTINE
-! ==============================================================================
-! Kills the background processes websites leave on your machine after you close 
-! the tab, preventing them from phoning home or pushing notifications later.
 *$csp=worker-src 'none',domain=~github.com|~reddit.com
 ||$websocket,third-party,domain=~discord.com|~twitch.tv
 
-! ==============================================================================
 ! 24. WEBASSEMBLY (WASM) & LOCALSTORAGE LOCKOUT
-! ==============================================================================
-! Terminates compiled code execution (WASM) used by advanced fingerprinting 
-! modules to evade standard JavaScript blockers.
 *\.wasm$third-party
 *##+js(abort-on-property-read, window.localStorage.setItem)
 
-! ==============================================================================
 ! 25. AMP (ACCELERATED MOBILE PAGES) FORCIBLE BYPASS
-! ==============================================================================
-! Automatically redirects Google AMP links to the actual, original website, 
-! breaking Google's hosted cache tracking.
 *##+js(remove-attr, href, a[data-amp])
 ||ampproject.org^$third-party
 
-! ==============================================================================
 ! 26. HARDWARE FINGERPRINT SPOOFING (Canvas & WebGL)
-! ==============================================================================
-! Instead of blocking trackers, this feeds them poisoned/fake hardware data. 
-! It forces the canvas rendering API to output an empty string.
 *##+js(set-constant, HTMLCanvasElement.prototype.toDataURL, '')
 *##+js(set-constant, WebGLRenderingContext.prototype.getParameter, '')
 
-! ==============================================================================
 ! 27. WEB BLUETOOTH & USB HARDWARE PORT BLOCKING
-! ==============================================================================
-! Prohibits websites from scanning your local area network, Bluetooth devices, 
-! or attempting to interact with USB devices plugged into your computer.
 *##+js(abort-on-property-read, navigator.bluetooth)
 *##+js(abort-on-property-read, navigator.usb)
 *##+js(abort-on-property-read, navigator.serial)
 
-! ==============================================================================
 ! 28. INVISIBLE OVERLAY & CLICK-HIJACKING SHIELD
-! ==============================================================================
-! Destroys massive invisible divs that sit transparently over the entire webpage 
-! waiting to hijack your first mouse click and launch a popup.
 ##div[style*="z-index: 2147483647"][style*="opacity: 0"]
 ##a[style*="position: absolute"][style*="width: 100%"][style*="height: 100%"]
 
-! ==============================================================================
 ! 29. FAKE "DOWNLOAD" BUTTON HEURISTICS
-! ==============================================================================
-! Procedurally identifies and hides advertisements disguised as massive green 
-! "Download" or "Start Now" buttons on file-sharing websites.
 ##a[class*="download-button"]:not([href$=".zip"]):not([href$=".pdf"])
 ##div[class*="button"]:has-text(/^Start Download$/):has(> img[src*="ad"])
 
-! ==============================================================================
 ! 30. DARK PATTERN & SCARCITY TIMER DEFUSION
-! ==============================================================================
-! Automatically hides fake "Only 2 items left!" or "Offer expires in 10:00" 
-! countdown timers designed to induce artificial purchasing panic.
 ##.scarcity-message
 ##[class*="countdown-timer"]
 ##div:has-text(/Only [0-9]+ left in stock/i)
 ##div:has-text(/offer ends in/i)
+
+! 31. AUDIO CONTEXT (DSP) FINGERPRINTING NEUTRALIZATION
+*##+js(abort-on-property-read, AudioContext.prototype.createOscillator)
+*##+js(abort-on-property-read, OfflineAudioContext.prototype.startRendering)
+*##+js(set-constant, AudioBuffer.prototype.getChannelData, '')
+
+! 32. CSS DATA EXFILTRATION & HOVER-KEYLOGGING SHIELD
+##[style*="url("]:hover
+||font-tracking.com^$css,third-party
+||tracker.com/css-keylogger^$third-party
+
+! 33. BATTERY STATUS & NETWORK SENSOR SPOOFING
+*##+js(set-constant, navigator.getBattery, undefined)
+*##+js(set-constant, navigator.connection, undefined)
+*##+js(set-constant, navigator.onLine, true)
+
+! 34. INDEXEDDB, WEBSQL & LOCAL-STORAGE NUKE
+*##+js(abort-on-property-read, window.indexedDB.open)
+*##+js(abort-on-property-read, window.openDatabase)
+*##+js(abort-on-property-read, window.sessionStorage.setItem)
+
+! 35. CLIPBOARD HIJACKING & PASTE-JACKING DEFENSE
+*##+js(abort-on-property-read, navigator.clipboard.writeText)
+*##+js(abort-on-property-read, document.execCommand, copy)
+
+! 36. HARDWARE CONCURRENCY & CPU CORE SPOOFING
+*##+js(set-constant, navigator.hardwareConcurrency, 2)
+*##+js(set-constant, navigator.deviceMemory, 4)
+
+! 37. BEACON-API POLYFILL DESTRUCTION
+*##+js(abort-on-property-write, window.navigator.sendBeacon)
+*##+js(abort-on-property-read, window.fetch, keepalive)
+
+! 38. PROACTIVE TYPO-SQUATTING & HOMOGRAPH QUARANTINE
+||xn--*^$document
+||*xn--*^$third-party
+
+! 39. THIRD-PARTY IFRAME SANDBOX ATTRIBUTE INJECTION
+*##+js(remove-attr, allow, iframe[src^="http"])
+*##+js(remove-attr, allowfullscreen, iframe)
+
+! 40. DOM MUTATION OBSERVER TERMINATION (Anti-Adblock Defusion II)
+*##+js(abort-on-property-read, window.MutationObserver)
+
+! 41. CNAME CLOAKING & DNS DECEPTION ARRAY (Massive Volume)
+||*k.omtrdc.net^$third-party
+||*sc.omtrdc.net^$third-party
+||*112.2o7.net^$third-party
+||*metrics.icloud.com^$third-party
+||*telemetry.microsoft.com^$third-party
+||*cname-track.*^$third-party
+||*dnslink.*^$third-party
+||*data.adobedc.net^$third-party
+||*smetrics.*^$third-party
+||*wt-us.*^$third-party
+||*a.pxi.pub^$third-party
+||*b.pxi.pub^$third-party
+
+! 42. GRAPHQL & API DATA EXFILTRATION LIMITS
+*api/graphql*?query=*telemetry*$xhr
+*api/graphql*?query=*trackEvent*$xhr
+*api/graphql*?query=*logActivity*$xhr
+*api/graphql*?query=*sendBeacon*$xhr
+*api/graphql*?query=*analytics*$xhr
+/api/v1/telemetry/$xhr
+/api/v2/metrics/$xhr
+/api/log/ui_events/$xhr
+
+! 43. HARDWARE SENSOR SPOOFING: GYROSCOPE, VR & GAMEPADS
+*##+js(abort-on-property-read, navigator.getGamepads)
+*##+js(abort-on-property-read, navigator.getVRDisplays)
+*##+js(abort-on-property-read, navigator.xr)
+*##+js(abort-on-property-read, window.DeviceOrientationEvent)
+*##+js(abort-on-property-read, window.DeviceMotionEvent)
+*##+js(set-constant, navigator.maxTouchPoints, 0)
+*##+js(set-constant, navigator.pdfViewerEnabled, false)
+
+! 44. WEBSOCKET (WSS) TELEMETRY SNIFFING & QUARANTINE
+||wss://*tracking*^$websocket
+||wss://*metrics*^$websocket
+||wss://*telemetry*^$websocket
+||wss://*logger*^$websocket
+||wss://*analytics*^$websocket
+||wss://*events*^$websocket
+||wss://*log.stream*^$websocket
+
+! 45. POLYMORPHIC REGEX SWARM (Maximum Mathematical Matching)
+/^https?:\/\/[a-z0-9-]+\.([a-z0-9-]+\.)*(tracker|analytics|log|stats)\./$third-party
+/^https?:\/\/[a-z0-9-]+\.([a-z0-9-]+\.)*(metrics|telemetry|beacon)\./$third-party
+/^https?:\/\/.*\/track(\/|\?)/$third-party
+/^https?:\/\/.*\/log(\/|\?)/$third-party
+/^https?:\/\/.*\/collect(\/|\?)/$third-party,xmlhttprequest
+/^https?:\/\/.*\/pixel(\/|\.gif)/$image,third-party
+
+! 46. IP-LEVEL AUTONOMOUS SYSTEM & CLUSTER BLOCKS
+! Blocks entire server clusters known exclusively for ad-bidding.
+||13.249.*^$third-party
+||54.239.*^$third-party
+||34.216.*^$third-party
+||52.84.*^$third-party
+||18.232.*^$third-party
+||142.250.*^$third-party,domain=~google.com|~youtube.com
+||172.217.*^$third-party,domain=~google.com|~youtube.com
+
+! 47. BASE64 & OBFUSCATED SCRIPT EXECUTION BLOCKS
+*$script,redirect-rule=noop.js,domain=base64-tracking.com
+*##+js(abort-on-property-read, window.atob, tracking)
+*##+js(abort-on-property-read, window.btoa, telemetry)
+||*data:application/javascript;base64,*$script,third-party
+
+! 48. REAL-TIME BIDDING (RTB) & AD-EXCHANGE SINGULARITY
+||rubiconproject.com^$third-party
+||appnexus.com^$third-party
+||openx.net^$third-party
+||pubmatic.com^$third-party
+||indexexchange.com^$third-party
+||casalemedia.com^$third-party
+||criteo.com^$third-party
+||outbrainimg.com^$third-party
+||taboola.com^$third-party
+||yieldmo.com^$third-party
+||sharethrough.com^$third-party
+||teads.tv^$third-party
+||smartadserver.com^$third-party
+||bidswitch.net^$third-party
+||adsrvr.org^$third-party
+||rlcdn.com^$third-party
+
+! 49. FONT, GLYPH & TYPOGRAPHIC FINGERPRINTING
+*##+js(abort-on-property-read, CanvasRenderingContext2D.prototype.measureText)
+*##+js(abort-on-property-read, CanvasRenderingContext2D.prototype.fillText)
+||use.typekit.net^$third-party
+||fast.fonts.net^$third-party
+||cloud.typography.com^$third-party
+
+! 50. ZERO-DAY PHISHING & HOMOGRAPH HEURISTICS
+##form[action*="login"][action*="http:"]
+##input[type="password"][style*="opacity: 0"]
+##input[type="password"][style*="position: absolute"]
+##div[class*="phish"]
+##div[class*="scam"]
+##iframe[src*="ngrok.io"]
+##iframe[src*="serveo.net"]
+
+##div:has-text(/^Реклама$/)
 !-------------------------------------------------------------------------------
