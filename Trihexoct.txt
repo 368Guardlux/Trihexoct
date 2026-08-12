@@ -1,17 +1,51 @@
-! Title: Trihexoct
-! Description: All-rounded performance filter list for network tracking, annoyances, and cosmetic fixes.
-! Homepage: https://github.com/lomibaobalong-png/Trihexoct
-! Expires: 2 days
-! Version: 1.0.0
+! ==============================================================================
+! 1. GLOBAL PRIVACY, TRACKING & TELEMETRY SHIELD
+! ==============================================================================
+! Automatically kills third-party tracking scripts across the entire internet.
+*telemetry*^$script,third-party
+*metrics*^$script,third-party
+*analytics*^$script,third-party
+||beacon.*^$third-party
+||tracking.*^$third-party
+||logger.*^$third-party
 
 ! ==============================================================================
-! 1. NETWORK BLOCKING
+! 2. ANTI-AI SCRAPING & AI TELEMETRY PROTECTION
 ! ==============================================================================
-||telemetry.*^$third-party
-||analytics.*^$third-party
+! Stops AI bots and language models from logging your browsing data or fingerprinting you.
+||chatgpt.com/backend-api/lat/serve^$xhr
+||platform.openai.com/v1/telemetry^$xhr
+||anthropic.com/api/telemetry^$xhr
+||sentry.io^$script,third-party
 
 ! ==============================================================================
-! 2. COSMETIC & ANNOYANCES
+! 3. GLOBAL ANNOYANCE AUTO-REMOVAL
 ! ==============================================================================
-##.cookie-banner
-##.newsletter-popup
+! Kills the most common overlay classes on ANY website automatically.
+##[id*="cookie-banner" i]
+##[class*="cookie-banner" i]
+##[id*="newsletter" i]
+##[class*="newsletter" i]
+##[class*="subscribe-overlay" i]
+##.modal-backdrop
+##.gdpr-overlay
+
+! ==============================================================================
+! 4. "AI-LIKE" PROCEDURAL AD DETECTION (HEURISTICS)
+! ==============================================================================
+! Scans the page structure dynamically to kill containers pretending to be content.
+! Kills any parent <div> that has a child containing the text "Advertisement" or "Sponsored"
+##div:has-text(/^Advertisement$/i)
+##div:has-text(/^Sponsored$/i)
+##article:has-text(/Promoted/i)
+
+! Kills any feed item that contains an ad-badge, regardless of the website URL
+##div[class*="feed"]:has(> div[class*="ad-badge" i])
+##div[class*="post"]:has(> span:has-text(Sponsored))
+
+! ==============================================================================
+! 5. CLEANUP (Empty Space Removal)
+! ==============================================================================
+! Removes dead empty spaces left behind when ads are blocked globally.
+##div[id^="ad-"]:empty
+##div[class^="ad-"]:empty
