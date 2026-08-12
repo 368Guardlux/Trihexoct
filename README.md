@@ -1,0 +1,1 @@
+Description: The absolute maximum-tier, omni-directional shield. Integrates advanced URL stripping, enterprise telemetry blocking, AI-scraping defense, omni-annoyance removal, and multi-lingual procedural heuristics.
