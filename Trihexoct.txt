@@ -1,8 +1,8 @@
-! Title: Trihexoct
-! Description: All-rounded performance filter list for network tracking, annoyances, and cosmetic fixes.
-! Homepage: https://github.com/lomibaobalong-png/Trihexoct
-! Expires: 2 days
-! Version: 2.0.0
+Title: Trihexoct
+Description: All-rounded performance filter list for network tracking, annoyances, and cosmetic fixes.
+Homepage: https://github.com/lomibaobalong-png/Trihexoct
+Expires: 2 days
+Version: 2.0.0
 
 ! ==============================================================================
 ! 1. GLOBAL PRIVACY, TRACKING & TELEMETRY SHIELD
