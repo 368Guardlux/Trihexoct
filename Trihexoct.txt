@@ -5,7 +5,7 @@
 ! Expires: 1 hour
 ! Version: 1.1.0
 ! Last modified: 11 Aug 2026
-! Description: The ultimate 50-layer heuristic firewall. Features regex pattern matching, hardware fingerprint spoofing, WebUSB blocking, Service Worker quarantines, and AMP detours.
+! Description: The ultimate, all-in-one security shield and 50-layer firewall for your web browser. Designed for maximum protection, it defends you from every possible angle. It actively cleans web links by removing invisible tracking codes, stops big tech companies from secretly recording your behavior, and blocks Artificial Intelligence (AI) bots from gathering your data. To keep your identity safe, it disguises your computer's unique details so you cannot be tracked, and stops websites from connecting to your physical devices or leaving hidden background programs running on your machine. Furthermore, it deeply cleans your screen by automatically removing annoying pop-ups, cookie banners, paywalls, and fake sponsored ads in multiple languages. It also forces fast, direct connections to websites instead of tracked versions. Simply put, it is a complete, professional-grade privacy guard that keeps your digital life clean, fast, and completely secure.
 !-------------------------------------------------------------------------------
 
 ! 1. OMNI-URL TRACKING PARAMETER STRIPPING
