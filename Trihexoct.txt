@@ -1,0 +1,17 @@
+! Title: Trihexoct
+! Description: All-rounded performance filter list for network tracking, annoyances, and cosmetic fixes.
+! Homepage: https://github.com/lomibaobalong-png/Trihexoct
+! Expires: 2 days
+! Version: 1.0.0
+
+! ==============================================================================
+! 1. NETWORK BLOCKING
+! ==============================================================================
+||telemetry.*^$third-party
+||analytics.*^$third-party
+
+! ==============================================================================
+! 2. COSMETIC & ANNOYANCES
+! ==============================================================================
+##.cookie-banner
+##.newsletter-popup
