@@ -1,12 +1,9 @@
-Title: Trihexoct
-Description: All-rounded performance filter list for network tracking, annoyances, and cosmetic fixes.
-Homepage: https://github.com/lomibaobalong-png/Trihexoct
-Expires: 2 days
-Version: 2.0.0
+[Trihexoct]
+! Title: Trihexoct
+! Homepage: https://github.com/lomibaobalong-png/Trihexoct
+! Author: lomibaobalong-png
+! Expires: 2 days
 
-! ==============================================================================
-! 1. GLOBAL PRIVACY, TRACKING & TELEMETRY SHIELD
-! ==============================================================================
 ||telemetry.*^$third-party
 ||analytics.*^$third-party
 ||metrics.*^$third-party
@@ -14,17 +11,11 @@ Version: 2.0.0
 ||tracking.*^$third-party
 ||logger.*^$third-party
 
-! ==============================================================================
-! 2. ANTI-AI SCRAPING & AI TELEMETRY PROTECTION
-! ==============================================================================
 ||chatgpt.com/backend-api/lat/serve^$xhr
 ||platform.openai.com/v1/telemetry^$xhr
 ||anthropic.com/api/telemetry^$xhr
 ||sentry.io^$script,third-party
 
-! ==============================================================================
-! 3. GLOBAL ANNOYANCE AUTO-REMOVAL
-! ==============================================================================
 ##[id*="cookie-banner" i]
 ##[class*="cookie-banner" i]
 ##[id*="newsletter" i]
@@ -33,17 +24,11 @@ Version: 2.0.0
 ##.modal-backdrop
 ##.gdpr-overlay
 
-! ==============================================================================
-! 4. PROCEDURAL AD DETECTION (HEURISTICS)
-! ==============================================================================
 ##div:has-text(/^Advertisement$/i)
 ##div:has-text(/^Sponsored$/i)
 ##article:has-text(/Promoted/i)
 ##div[class*="feed"]:has(> div[class*="ad-badge" i])
 ##div[class*="post"]:has(> span:has-text(Sponsored))
 
-! ==============================================================================
-! 5. CLEANUP
-! ==============================================================================
 ##div[id^="ad-"]:empty
 ##div[class^="ad-"]:empty
