@@ -9,34 +9,40 @@
 !-------------------------------------------------------------------------------
 
 ! 1. OMNI-URL TRACKING PARAMETER STRIPPING
-$removeparam=utm_source
-$removeparam=utm_medium
-$removeparam=utm_campaign
-$removeparam=utm_term
-$removeparam=utm_content
-$removeparam=utm_id
+$removeparam=/^utm_.*/
+$removeparam=/^fb_.*/
 $removeparam=fbclid
 $removeparam=gclid
+$removeparam=wbraid
+$removeparam=gbraid
 $removeparam=msclkid
 $removeparam=igshid
 $removeparam=twclid
-$removeparam=mc_eid
-$removeparam=si
-$removeparam=pi
-$removeparam=_gl
+$removeparam=ttclid
+$removeparam=li_fat_id
+$removeparam=ndclid
+$removeparam=sc_cid
 $removeparam=yclid
+$removeparam=mc_eid
 $removeparam=mkt_tok
-$removeparam=ref_src
-$removeparam=rtid
+$removeparam=_hsenc
+$removeparam=_hsmi
+$removeparam=trk_msg
 $removeparam=s_kwcid
-$removeparam=wbraid
-$removeparam=gbraid
+$removeparam=oly_enc_id
+$removeparam=vero_id
 $removeparam=irclickid
-$removeparam=pd_rd_r
-$removeparam=pd_rd_w
-$removeparam=cmpid
 $removeparam=zanpid
 $removeparam=obOrigUrl
+$removeparam=click_id
+$removeparam=ascsubtag
+$removeparam=pd_rd_r
+$removeparam=pd_rd_w
+$removeparam=ref_src
+$removeparam=rtid
+$removeparam=cmpid
+$removeparam=epik
+$removeparam=cjevent
 
 ! 2. ENTERPRISE TELEMETRY, ANALYTICS & CNAME CLOAKING
 ||telemetry.*^$third-party
@@ -45,25 +51,59 @@ $removeparam=obOrigUrl
 ||tracking.*^$third-party
 ||logger.*^$third-party
 ||events.*^$third-party
+||beacon.*^$third-party
+||spoor-api.*^$third-party
+||collect.*^$third-party
+||log.*^$third-party
+||fullstory.com^$third-party
+||logrocket.com^$third-party
+||smartlook.com^$third-party
+||mouseflow.com^$third-party
+||inspectlet.com^$third-party
+||sessioncam.com^$third-party
+||hotjar.com^$third-party
+||clarity.ms^$third-party
+||segment.com^$third-party
+||mparticle.com^$third-party
+||tealiumiq.com^$third-party
+||bluekai.com^$third-party
+||exelator.com^$third-party
+||krux.com^$third-party
+||liveramp.com^$third-party
+||treasuredata.com^$third-party
+||optimizely.com^$third-party
+||vwo.com^$third-party
+||abtasty.com^$third-party
+||dynamicyield.com^$third-party
+||branch.io^$third-party
+||appsflyer.com^$third-party
+||adjust.com^$third-party
+||kochava.com^$third-party
+||singular.net^$third-party
+||sentry-cdn.com^$third-party
+||browser.sentry-cdn.com^$third-party
+||datadoghq-browser-agent.com^$third-party
+||datadoghq.com^$third-party
+||newrelic.com^$third-party
+||raygun.io^$third-party
+||bugsnag.com^$third-party
 ||google-analytics.com^$third-party
 ||googletagmanager.com/gtag/js^$third-party
 ||connect.facebook.net^$third-party
-||clarity.ms^$third-party
-||hotjar.com^$third-party
 ||tiktok.com/api/commit/^$third-party
 ||sb.scorecardresearch.com^$third-party
-||datadoghq-browser-agent.com^$third-party
-||browser.sentry-cdn.com^$third-party
+||b.scorecardresearch.com^$third-party
 ||omtrdc.net^$third-party
 ||demdex.net^$third-party
 ||marketo.com^$third-party
-||kochava.com^$third-party
-||appsflyer.com^$third-party
-||adjust.com^$third-party
 
 ! 3. AGGRESSIVE ANTI-FINGERPRINTING & SESSION REPLAY
-||fpjs.io^$third-party,script
-||fingerprintjs.com^$third-party,script
+||fpjs.io^$third-party,script,important
+||fingerprintjs.com^$third-party,script,important
+||cdn.jsdelivr.net/npm/@fingerprintjs/*$third-party,script
+||amiunique.org^$third-party
+||panopticlick.eff.org^$third-party
+||browserleaks.com^$third-party
 ||mouseflow.com^$third-party
 ||fullstory.com^$third-party
 ||smartlook.com^$third-party
@@ -71,241 +111,997 @@ $removeparam=obOrigUrl
 ||inspectlet.com^$third-party
 ||contentsquare.net^$third-party
 ||crazyegg.com^$third-party
+||luckyorange.com^$third-party
+||clicktale.net^$third-party
+||ptengine.com^$third-party
+||decibelinsight.net^$third-party
+||glassboxdigital.com^$third-party
+||yandex.ru/metrika^$third-party
+||mc.yandex.ru^$third-party
+||iovation.com^$third-party
+||sift.com^$third-party
+||siftscience.com^$third-party
+||threatmetrix.com^$third-party
+||forter.com^$third-party
+||seon.io^$third-party
+||riskified.com^$third-party
+||arkoselabs.com/telemetry^$third-party
+/^https?:\/\/.*\/fp\.js/
+/^https?:\/\/.*\/fingerprint\.js/
+/^https?:\/\/.*\/device_id\.js/
 
 ! 4. OMNI-AI DATA HARVESTING & LLM TELEMETRY DEFENSE
 ||chatgpt.com/backend-api/lat/serve^$xhr
+||chatgpt.com/backend-api/telemetry^$xhr
+||chatgpt.com/backend-api/action_metrics^$xhr
 ||platform.openai.com/v1/telemetry^$xhr
 ||oaistatic.com/telemetry^$third-party
+||statsigapi.net^$domain=chatgpt.com|openai.com
 ||anthropic.com/api/telemetry^$xhr
-||api.perplexity.ai/telemetry^$xhr
-||sentry.io^$script,third-party
-||huggingface.co/api/telemetry^$xhr
-||api.segment.io^$third-party
-||cohere.ai/telemetry^$xhr
+||claude.ai/api/telemetry^$xhr
+||claude.ai/api/log^$xhr
+||statsig.claude.ai^$xhr
 ||bard.google.com/log^$xhr
+||gemini.google.com/log^$xhr
+||gemini.google.com/telemetry^$xhr
+||aistudio.google.com/log^$xhr
+||sydney.bing.com/telemetry^$xhr
+||copilot.microsoft.com/api/log^$xhr
+||copilot.microsoft.com/telemetry^$xhr
+||meta.ai/telemetry^$xhr
+||meta.ai/metrics^$xhr
+||api.perplexity.ai/telemetry^$xhr
+||huggingface.co/api/telemetry^$xhr
+||huggingface.co/api/metrics^$xhr
+||cohere.ai/telemetry^$xhr
 ||api.midjourney.com/telemetry^$xhr
 ||stability.ai/metrics^$xhr
+||api.notion.com/v1/telemetry^$domain=notion.so
+||telemetry.grammarly.com^$third-party
+||fides.grammarly.com^$third-party
+||sentry.io^$xhr,domain=chatgpt.com|claude.ai|perplexity.ai|openai.com
+||datadoghq.com^$xhr,domain=chatgpt.com|claude.ai|perplexity.ai|openai.com
 
-! 5. HARDENED ANTI-ADBLOCK & PAYWALL DEFUSION
+! 5. HARDENED ANTI-ADBLOCK, PAYWALL DEFUSION & WALL BYPASS
 ||fundingchoicesmessages.google.com^$third-party
 ||blockadblock.com^$third-party
 ||adblockanalytics.com^$third-party
 ||antiblock.org^$third-party
 ||detectadblock.com^$third-party
+||getadmiral.com^$third-party
+||pagefair.com^$third-party
+||pagefair.net^$third-party
+||addefend.com^$third-party
+||blockthrough.com^$third-party
+||secretmedia.com^$third-party
+||sourcepoint.com^$third-party
+||tinypass.com^$third-party
+||piano.io^$third-party
+||zephr.com^$third-party
+||evolok.net^$third-party
+||pelcro.com^$third-party
+||poool.fr^$third-party
+||wallkit.io^$third-party
 ##.adblock-notice
 ##.adblock-overlay
-##div[class*="adblock" i]:has-text(/disable|whitelist|turn off/i)
+##.adblock-modal
+##div[class*="adblock" i]:has-text(/disable|whitelist|turn off|ad blocker/i)
 ##div[id*="paywall" i]
 ##div[class*="paywall" i]
 ##.gate-overlay
 ##.tp-modal
+##.tp-backdrop
 ##div[id^="zephr-"]
+##div[class*="subscriber-gate" i]
+##div[class*="metered-overlay" i]
+*##+js(set, googlefc, undefined)
+*##+js(set, window.googlefc, undefined)
+*##+js(set, window.hasAdBlocker, false)
+*##+js(set, window.canRunAds, true)
+*##+js(set, window.isAdBlockActive, false)
+*##body:style(overflow: auto !important; position: static !important;)
+*##html:style(overflow: auto !important;)
 
 ! 6. ABSOLUTE ANNOYANCE, MODAL & POP-UP PURGE
 ##[id*="cookie-banner" i]
 ##[class*="cookie-banner" i]
+##[id*="cookie-consent" i]
+##[class*="cookie-consent" i]
+##.cookie-consent-overlay
+##.gdpr-overlay
+##.modal-backdrop
+##[id^="sp_message_container"]
+##[id*="onetrust-consent-sdk"]
+##[id*="usercentrics-root"]
+##[id*="didomi-host"]
+##.qc-cmp2-container
+##[id*="iubenda-cs"]
+##.cookiebot-dialog-mask
 ##[id*="newsletter" i]
 ##[class*="newsletter" i]
-##.modal-backdrop
-##.gdpr-overlay
-##.cookie-consent-overlay
-##[id^="sp_message_container"]
+##[class*="subscribe-overlay" i]
+##[class*="exit-intent" i]
+##div[class*="optinmonster" i]
+##div[id*="sleeknote"]
+##div[class*="privy-embed"]
+##div[class*="klaviyo-form"]
 ###credential_picker_container
 ##.yolo-modal-container
 ##iframe[src*="smartlock.google.com"]
 ##iframe[src*="accounts.google.com/gsi/iframe"]
+##div[id*="gsi_container"]
 ##.web-push-prompt
 ##[id^="onesignal-popover-container"]
+##[id^="onesignal-slidedown-container"]
+##div[class*="push-notification" i]
+##.smart-banner-container
+##.app-install-banner
+##[id^="branch-banner"]
+##[class*="MobileAppPrompt"]
+##div[class*="open-in-app" i]
 
 ! 7. FLOATING VIDEO & STICKY HEADER ANNIHILATION
 ##.video-sticky
 ##.floating-video
-##[class*="outstream-video"]
+##.sticky-video
+##[class*="outstream-video" i]
+##[id*="outstream" i]
 ##.jwplayer.jw-flag-floating
 ##.vjs-floating
 ##[id*="sticky-player"]
+##[class*="sticky-player" i]
+##[id*="connatix" i]
+##[class*="connatix" i]
+##div[id*="vidoomy"]
+##div[class*="aniview" i]
+##div[id*="primis" i]
+##div[class*="primis" i]
+##div[id*="playbuzz" i]
+##div[class*="exco-player" i]
+##div[class*="brid-tv" i]
+##.video-pip-container
+##div[class*="floating-player" i]
+##div[class*="sticky-media" i]
+##.sticky-header:style(position: absolute !important;)
+##header[class*="sticky" i]:style(position: absolute !important;)
+##div[class*="sticky-banner" i]
+##div[class*="floating-banner" i]
+##div[class*="bottom-sticky" i]
+##div[id*="bottom-sticky" i]
+##div[class*="sticky-footer" i]
 
 ! 8. SOCIAL MEDIA CONTAINMENT & COMMENT SCRUBBING
 ##.fb-page
+##.fb-like
 ##.twitter-timeline
+##.twitter-tweet
 ##[data-pin-do]
+##.instagram-media
+##.tiktok-embed
+##.reddit-embed
+##.threads-embed
+##div[class*="social-share" i]
+##div[class*="share-bar" i]
+##div[class*="share-buttons" i]
+##div[class*="social-widget" i]
 ##iframe[src*="facebook.com/plugins"]
 ##iframe[src*="platform.twitter.com/widgets"]
 ##iframe[src*="linkedin.com/embed"]
 ##iframe[src*="tiktok.com/embed"]
 ##iframe[src*="instagram.com/embed"]
+##iframe[src*="pinterest.com/embed"]
+##iframe[src*="widgets.wp.com/likes"]
+##iframe[src*="reddit.com/embed"]
 ###disqus_thread
+##[id*="openweb" i]
+##[class*="openweb" i]
+##[id*="spotim" i]
+##[class*="spotim" i]
+##[id*="viafoura" i]
+##.vuukle-powerbar
+##[id*="vuukle-comments"]
+##div[class*="fb-comments" i]
+##div[id*="coral-comments"]
+##div[id*="intensedebate"]
+##div[id*="hypothes-is"]
 
 ! 9. MULTI-LINGUAL PROCEDURAL AD & CHUMBOX ERADICATION
 ##div:has-text(/^Advertisement$/i)
 ##div:has-text(/^Sponsored$/i)
+##div:has-text(/^Sponsored Stories$/i)
+##div:has-text(/^Paid Content$/i)
+##div:has-text(/^Partner Content$/i)
+##div:has-text(/^Promoted$/i)
 ##article:has-text(/Promoted/i)
-##div[class*="feed"]:has(> div[class*="ad-badge" i])
-##div[class*="post"]:has(> span:has-text(Sponsored))
+##article:has-text(/Sponsored/i)
+##div[class*="feed" i]:has(> div[class*="ad-badge" i])
+##div[class*="post" i]:has(> span:has-text(/^Sponsored$/i))
+##div:has(> span:has-text(/^Sponsored$/i))
 ##span:has-text(/^Promoted by$/i):upward(2)
+##div:has-text(/^Recommended by$/i):has(a[href*="taboola"])
+##div:has-text(/^Recommended by$/i):has(a[href*="outbrain"])
 ##div:has-text(/^Patrocinado$/i)
 ##div:has-text(/^Publicidad$/i)
+##div:has-text(/^Anúncio$/i)
+##div:has-text(/^Conteúdo Patrocinado$/i)
 ##div:has-text(/^Sponsorisé$/i)
+##div:has-text(/^Publicité$/i)
+##div:has-text(/^Contenu Sponsorisé$/i)
 ##div:has-text(/^Gesponsert$/i)
 ##div:has-text(/^Anzeige$/i)
+##div:has-text(/^Werbung$/i)
+##div:has-text(/^Sponsorizzato$/i)
+##div:has-text(/^Pubblicità$/i)
+##div:has-text(/^Gesponsord$/i)
+##div:has-text(/^Advertentie$/i)
+##div:has-text(/^Реклама$/i)
+##div:has-text(/^Спонсируемый content$/i)
+##div:has-text(/^Sponsorowane$/i)
+##div:has-text(/^Reklama$/i)
+##div:has-text(/^Sponsorlu$/i)
+##div:has-text(/^Reklam$/i)
+##div:has-text(/^إعلان$/)
+##div:has-text(/^محتوى برعاية$/)
 ##div:has-text(/^スポンサー$/)
 ##div:has-text(/^広告$/)
+##div:has-text(/^プロモーション$/)
+##div:has-text(/^스폰서$/)
+##div:has-text(/^광고$/)
+##div:has-text(/^赞助$/)
+##div:has-text(/^贊助內容$/)
+google.*##.uEierd
+google.*##.ads-ad
+google.*##[data-text-ad]
+google.*##div[aria-label="Ads"]
+bing.com##.b_ad
+bing.com##li.b_ad
+duckduckgo.com##.results--ads
+duckduckgo.com##.js-ads-main-container
+yahoo.com##.searchAds
+yandex.*##.serp-adv-item
 ##div[id^="taboola-"]
-##div[class*="outbrain-"]
+##div[class*="taboola-"]
+##div[id*="outbrain"]
+##div[class*="outbrain"]
 ##.teads-inread
 ##[id^="rc-widget-"]
+##[class*="revcontent"]
 ##.plista-widget
+##[id^="contentad"]
+##[id^="mgid_widget"]
+##[class*="mgid_widget"]
+##[class*="ntv-"]
+##[id*="nativo"]
+##[id^="zergnet-widget"]
+##[id^="adblade-"]
+##[class*="lockerdome"]
+##div[class*="yieldmo-"]
+##div[id*="trafficjunky"]
+||trc.taboola.com^$third-party
+||widgets.outbrain.com^$third-party
+||cdn.revcontent.com^$third-party
+||jsc.mgid.com^$third-party
+||api.content.ad^$third-party
 
 ! 10. ADVANCED SECURITY & MALICIOUS SCRIPT BLOCKING
 ||coin-hive.com^$third-party
+||coinhive.com^$third-party
 ||minemytraffic.com^$third-party
 ||browsermine.com^$third-party
 ||authedmine.com^$third-party
 ||webminepool.com^$third-party
+||webminerpool.com^$third-party
+||crypto-webminer.com^$third-party
+||jsecoin.com^$third-party
+||coinimp.com^$third-party
+||coinimp.net^$third-party
+||cryptaloot.pro^$third-party
+||crypto-loot.com^$third-party
+||minexmr.com^$third-party
+||hashvault.pro^$third-party
 /cryptonight.wasm$third-party
+/cn.wasm$third-party
+/hash.wasm$third-party
+/miner.wasm$third-party
+-coin-hive.js
+-crypto-miner/*
+/coinhive.min.js
+/miner.full.js
+/authedminer.js
+/browsermine.js
+||popads.net^$third-party
+||popcash.net^$third-party
+||propellerads.com^$third-party
+||adsterra.com^$third-party
+||exoclick.com^$third-party
+||hilltopads.com^$third-party
+||juicyads.com^$third-party
+||clickadu.com^$third-party
+||trafficstars.com^$third-party
+||adcash.com^$third-party
+||betweendigital.com^$third-party
+||zeropark.com^$third-party
+||*tech-support-alert*^$third-party
+||*security-warning-online*^$third-party
+||*microsoft-help-desk*^$third-party
+||*apple-security-alert*^$third-party
+/alert-loop.js
+/browser-lock.js
 
 ! 11. DYNAMIC DOM CLEANUP
 ##div[id^="ad-"]:empty
 ##div[class^="ad-"]:empty
+##div[class*="ad-container"]:empty
+##div[class*="ad-wrapper"]:empty
+##div[class*="ad-slot"]:empty
+##div[class*="advertisement"]:empty
 ##aside[class*="advertisement"]:empty
 ##.ad-slot:empty
 ##.banner-ad:empty
+##.top-ad:empty
+##.bottom-ad:empty
+##.sidebar-ad:empty
+##.inline-ad:empty
+##div[id^="div-gpt-ad-"]:empty
+##div[id^="google_ads_iframe_"]:empty
+##div[class*="google-auto-placed"]:empty
+##ins[class="adsbygoogle"]:empty
+##.gpt-ad:empty
+##.dfp-ad:empty
+##.dfp-slot:empty
+##div[id^="amzn-ad-"]:empty
+##div[id^="taboola-"]:empty
+##div[class*="outbrain_widget"]:empty
+##div[id^="rc-widget-"]:empty
+##div[class*="zergnet-widget"]:empty
+##div[data-ad-unit]:empty
+##div[data-ad-slot]:empty
 ##iframe:empty
+##iframe[src="about:blank"]
+##iframe[title*="Advertisement" i]
+##iframe[title*="Ads" i]
+##div:has(> iframe:empty):empty
+##img[width="1"][height="1"]
+##img[src^="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"]
+##div[style*="z-index: 2147483647"]:empty
+##.ad-space
+##.ad-zone
+##.ad-box
+##[data-role="ad-container"]
+##[data-type="ad"]
+##.sponsor-post-space:empty
 
 ! 12. ALGORITHMIC SCRIPTLET INJECTION & API MOCKING
 *##+js(set, _bypassed, true)
 *##+js(set, window.adblockDetected, false)
-*##+js(set, hasAdBlocker, false)
-*##+js(set-constant, Object.keys, true)
+*##+js(set, window.hasAdBlocker, false)
+*##+js(set, window.isAdBlockActive, false)
+*##+js(set, window.canRunAds, true)
+*##+js(set, window.googlefc.ccpa.getUSPData, noopFunc)
+*##+js(set, window.I18N_AD_BLOCKER, false)
+*##+js(set, document.blockAdBlock, undefined)
+*##+js(set, window.ga, noopFunc)
+*##+js(set, window.gtag, noopFunc)
+*##+js(set, window.fbq, noopFunc)
+*##+js(set, window.amplitude, noopFunc)
+*##+js(set, window.mixpanel, noopFunc)
+*##+js(set, window.ym, noopFunc)
+*##+js(set, window.AppMeasurement, noopFunc)
+*##+js(set, document.dataLayer.push, noopFunc)
+*##+js(abort-current-inline-script, document.createElement, adsbygoogle)
+*##+js(abort-current-inline-script, window.google_ad_client)
+*##+js(abort-current-inline-script, window.taboola_script)
 *##+js(abort-on-property-read, window.grecaptcha)
-*##+js(abort-on-property-read, Document.prototype.cookie)
-*##+js(abort-current-inline-script, Document.prototype.createElement, ad)
+*##+js(abort-on-property-read, window._outbrain)
+*##+js(abort-on-property-write, window._taboola)
+*##+js(abort-on-property-write, window.AmazonUAP)
+*##+js(abort-on-property-read, HTMLCanvasElement.prototype.toDataURL)
+*##+js(abort-on-property-read, HTMLCanvasElement.prototype.getImageData)
+*##+js(abort-on-property-read, AudioContext.prototype.createOscillator)
+*##+js(abort-on-property-read, Navigator.prototype.sendBeacon)
+*##+js(window-open-defuser)
+*##+js(set-constant, window.onbeforeunload, null)
+*##+js(set-constant, document.onbeforeunload, null)
+*##+js(abort-on-property-write, window.location.replace)
+*##+js(set-constant, rtcPeerConnection, undefined)
+*##+js(set-constant, RTCPeerConnection, undefined)
+*##+js(set-constant, webkitRTCPeerConnection, undefined)
 
 ! 13. XPATH STRUCTURAL HEURISTICS
-#?#//div[contains(@class, 'post') and .//span[text()='Sponsored']]
-#?#//div[starts-with(@id, 'google_ads_iframe')]
-#?#//aside[descendant::text()[contains(., 'Advertisement')]]
+#?#//div[contains(translate(.//text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'sponsored') and (contains(@class, 'post') or contains(@class, 'feed') or contains(@class, 'item'))]
+#?#//article[contains(translate(.//text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'promoted')]
+#?#//section[contains(translate(.//text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'advertisement')]
+#?#//div[descendant::a[contains(@href, 'taboola.com') or contains(@href, 'outbrain.com') or contains(@href, 'revcontent.com')]]
+#?#//ul[descendant::li[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'you may also like')]]
+#?#//section[descendant::*[text()='More From The Web' or text()='Recommended by']]
+#?#//span[text()='Ad' or text()='Ads' or text()='Sponsored']/ancestor::div[contains(@class, 'container') or contains(@class, 'wrapper')]
+#?#//div[@data-content="Advertisement"]/ancestor::div[1]
+#?#//div[starts-with(@id, 'google_ads_iframe')]/ancestor::div[2]
+#?#//iframe[starts-with(@name, '__tcfapi') or starts-with(@name, '__gpp')]/parent::div
+#?#//aside[descendant::iframe and descendant::*[contains(translate(text(), 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'ad')]]
+#?#//svg[descendant::title[contains(translate(., 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', 'abcdefghijklmnopqrstuvwxyz'), 'advertisement')]]/ancestor::div[2]
 
 ! 14. NETWORK-LEVEL BEACON & PING ANNIHILATION
 *$ping,third-party
 *$beacon,third-party
+*$prefetch,third-party
+*$prerender,third-party
+*$preconnect,third-party
+*$csp_report,third-party
+||sentry.io/api/*/security/?sentry_key=^$csp_report
+||report-uri.com^$csp_report
+||uriports.com^$csp_report
+*/collect?*$xhr,third-party
+*/collect/*$xhr,third-party
+*/api/v1/track*$xhr,third-party
+*/api/v1/telemetry*$xhr,third-party
+*/log/event*$xhr,third-party
+*/v1/batch*$xhr,third-party
+*/g/collect?*$xhr,third-party
+*/track/v?*$xhr,third-party
+*/click/log/*$third-party
+*/analytics/track/*$third-party
+*/pixel/track/*$third-party
+*tracker.gif?*$third-party,image
+||stun.l.google.com^$third-party
+||stun.*.com^$third-party
+||turn.*.com^$third-party
 
 ! 15. JSON & XML API PAYLOAD MUTILATION (json-prune)
-*##+js(json-prune, ads sponsored_posts promotions)
-*##+js(json-prune, data.advertisements)
-*##+js(json-prune, config.telemetry)
+*##+js(json-prune, ads advertisements sponsored_posts promotions promoted_content)
+*##+js(json-prune, data.advertisements data.promotions data.sponsored)
+*##+js(json-prune, items[].ad_type items[].is_sponsored items[].promoted)
+*##+js(json-prune, layout.ad_slots UI.banners display.ads)
+*##+js(json-prune, config.telemetry system.telemetry app.metrics)
+*##+js(json-prune, tracking analytics beacons tracking_pixels)
+*##+js(json-prune, data.user.is_tracked data.profile.tracking_id)
+*##+js(json-prune, device_info hardware_profile biometric_data)
+*##+js(json-prune, experiments ab_tests split_tests feature_flags)
+*##+js(json-prune, config.experiments rollout_config)
+*##+js(json-prune, flags.tracking flags.telemetry)
+*##+js(json-prune, adPlacements adBreaks preroll midroll postroll)
+*##+js(json-prune, video.ads video.monetization playback.ad_urls)
+*##+js(json-prune, vast_url vmap_url ad_server_payload)
+*##+js(json-prune, data.*.edges[].node.ad_info)
+*##+js(json-prune, data.*.edges[].node.is_promoted)
+*##+js(json-prune, data.*.edges[].node.sponsor_tags)
 
 ! 16. CONTENT SECURITY POLICY (CSP) INJECTION
-||$csp=worker-src 'none',domain=taboola.com|outbrain.com
-||$csp=script-src 'self',domain=malicious-example.com
+*$csp=worker-src 'none',domain=taboola.com|outbrain.com|criteo.com|doubleclick.net
+*$csp=worker-src 'none',domain=revcontent.com|mgid.com|adsafeprotected.com
+*$csp=worker-src 'none',domain=scorecardresearch.com|hotjar.com|fullstory.com
+*$csp=sandbox allow-scripts allow-same-origin,domain=popads.net|propellerads.com
+*$csp=sandbox allow-scripts allow-same-origin,domain=exoclick.com|adsterra.com
+*$csp=object-src 'none'
+||*.zip^$csp=script-src 'self'
+||*.review^$csp=script-src 'self'
+||*.country^$csp=script-src 'self'
+||*.kim^$csp=script-src 'self'
+||*.science^$csp=script-src 'self'
+||*.work^$csp=script-src 'self'
+*$csp=connect-src 'self',domain=google-analytics.com|googletagmanager.com
+*$csp=connect-src 'self',domain=facebook.net|tiktok.com|linkedin.com
 
 ! 17. POPUNDER, TAB-HIJACK & WINDOW-OPEN QUARANTINE
-*$popunder,third-party
-*$popup,third-party,domain=~youtube.com|~github.com
+*$popunder
+*$popup,third-party,domain=~youtube.com|~github.com|~google.com|~paypal.com|~stripe.com|~apple.com|~twitch.tv|~discord.com|~microsoft.com|~steamcommunity.com
+||*.date^$popup
+||*.faith^$popup
+||*.win^$popup
+||*.stream^$popup
+||*.download^$popup
+||*.vip^$popup
+||*.click^$popup
+||*.link^$popup
+|data:text/html*$popup
+|blob:http*$popup
+|blob:https*$popup
+||about:blank*$popup,third-party
+*##+js(window-open-defuser)
+*##+js(set-constant, window.onunload, null)
+*##+js(set-constant, window.onbeforeunload, null)
+*##+js(abort-on-property-write, window.location.replace)
+*##+js(abort-on-property-read, document.referrer)
+||onclickalgo.com^$third-party
+||onclickmega.com^$third-party
+||go.trckrwnd.com^$third-party
+||propellerclick.com^$third-party
+||popcash.net^$third-party
+||popads.net^$third-party
+||admaven.com^$third-party
 
-! 18. WEBRTC, STUN/TURN & IP-LEAK BLOCKS
+! 18. WEBRTC, STUN/TURN, NAT TRAVERSAL & IP-LEAK BLOCKS
 ||stun.*^$third-party
 ||turn.*^$third-party
 ||webrtc.*^$third-party
+||rtc.*^$third-party
+||stun.*.*^$third-party
+||turn.*.*^$third-party
+||stun.l.google.com^$third-party
+||stun1.l.google.com^$third-party
+||stun2.l.google.com^$third-party
+||stun3.l.google.com^$third-party
+||stun4.l.google.com^$third-party
+||stun.services.mozilla.com^$third-party
+||global.stun.twilio.com^$third-party
+||stun.cloudflare.com^$third-party
+||stun.miwifi.com^$third-party
+*##+js(set-constant, RTCPeerConnection, undefined)
+*##+js(set-constant, mozRTCPeerConnection, undefined)
+*##+js(set-constant, webkitRTCPeerConnection, undefined)
+*##+js(set-constant, RTCDataChannel, undefined)
+*/getip$xhr,third-party
+*/client-ip$xhr,third-party
+*/myip$xhr,third-party
+*/ip-api/$xhr,third-party
+||api.ipify.org^$third-party
+||ipinfo.io^$third-party
+||ipleak.net^$third-party
+||ipapi.co^$third-party
+||freegeoip.app^$third-party
+||geolocation-db.com^$third-party
+||wss://*signaling*^$websocket
+||wss://*webrtc*^$websocket
+||wss://*peer*^$websocket
 
 ! 19. ANTI-PAYWALL CSS OVERRIDES (Scroll Restoration)
-*##body:style(overflow: visible !important; position: static !important;)
-*##html:style(overflow: visible !important;)
-##[class*="paywall"] ~ *:style(filter: none !important; opacity: 1 !important; display: block !important;)
-##.blurred-content:style(filter: none !important;)
+*##html:style(overflow: visible !important; overflow-y: auto !important; touch-action: auto !important; overscroll-behavior: auto !important;)
+*##body:style(overflow: visible !important; overflow-y: auto !important; position: static !important; min-height: 100vh !important; touch-action: auto !important;)
+*##body, html, p, span, div, article, section:style(user-select: auto !important; -webkit-user-select: auto !important; pointer-events: auto !important;)
+*##+js(set-constant, document.oncontextmenu, null)
+*##+js(set-constant, document.onselectstart, null)
+*##+js(set-constant, document.ondragstart, null)
+*##+js(set-constant, document.oncopy, null)
+##[class*="blur"]:style(filter: none !important; text-shadow: none !important; color: inherit !important; opacity: 1 !important;)
+##[id*="blur"]:style(filter: none !important; text-shadow: none !important; color: inherit !important; opacity: 1 !important;)
+##[style*="filter: blur"]:style(filter: none !important; text-shadow: none !important; opacity: 1 !important;)
+##[style*="filter:blur"]:style(filter: none !important; text-shadow: none !important; opacity: 1 !important;)
+##[style*="mask-image"]:style(mask-image: none !important; -webkit-mask-image: none !important;)
+##[style*="linear-gradient"]:style(mask-image: none !important; -webkit-mask-image: none !important;)
+##.fade-out:style(display: none !important; opacity: 0 !important; pointer-events: none !important;)
+##.bottom-fade:style(display: none !important;)
+##article:style(max-height: none !important; height: auto !important; overflow: visible !important;)
+##[class*="article-body"]:style(max-height: none !important; height: auto !important; overflow: visible !important;)
+##[class*="paywall"] ~ *:style(filter: none !important; opacity: 1 !important; display: block !important; max-height: none !important; visibility: visible !important;)
 
 ! 20. SHADOW DOM PIERCING & OBFUSCATED AD REMOVAL
+##amzn-ad
+##taboola-widget
+##outbrain-widget
+##google-ad
+##sponsored-post
+##sponsored-content
+##native-ad
+##app-install-banner
+##ytd-promoted-video-renderer
+##ytd-promoted-sparkles-web-renderer
+##ad-slot
+##ad-placement
+##brave-ad
 ##:host-context(article) .sponsored
-##:host(.ad-container) > div
 ##:host-context(main) [class*="native-ad"]
+##:host-context(aside) [class*="promoted"]
+##:host-context(section) [data-ad-concept]
+##:host(.ad-container) > div
+##:host(.sponsor-wrapper) > *
+##:host([data-ad-status="active"])
+##::part(ad-badge)
+##::part(sponsored-label)
+##::part(promoted-content)
+##::part(outstream-player)
+##div[style*="z-index: 2147483647"]:not([class]):not([id]):style(pointer-events: none !important; display: none !important;)
+##div[style*="z-index: 2147483646"]:style(pointer-events: none !important; display: none !important;)
+##div[style*="z-index: 9999999"]:style(pointer-events: none !important; display: none !important;)
+##[style*="data:image/jpeg;base64,"]
+##[style*="data:image/webp;base64,"]
+##div[style*="background-image: url('data:image/"]
 
 ! 21. MICRO-PIXEL & TRACKING FONT ERADICATION
 *\.gif?*tracking*$image,third-party
 *\.png?*pixel*$image,third-party
-||fonts.googleapis.com/css?*family=Oswald$third-party
-*$font,third-party,domain=trackingsite.com
+*\.gif?*action=*$image,third-party
+*/1x1.gif?$image,third-party
+*/px.gif?$image,third-party
+*/clear.png?$image,third-party
+*/blank.gif?$image,third-party
+*/impression.gif?$image,third-party
+*/open.gif?$image,third-party
+*/track.gif?$image,third-party
+*/b.gif?$image,third-party
+*/i.gif?$image,third-party
+||log.pinterest.com/?guid=$image,third-party
+*/tracking.svg?$image,third-party
+*/pixel.svg?$image,third-party
+||*data:image/svg+xml;base64,*$image,third-party,domain=trackingsite.com
+*/favicon.ico?*=*$third-party
+*/favicon.ico?v=*$third-party
+*/apple-touch-icon.png?*=*$third-party
+||use.typekit.net^$third-party
+||fast.fonts.net^$third-party
+||cloud.typography.com^$third-party
+||fonts.gstatic.com/s/*/*-tracking-*$font,third-party
+||hello.myfonts.net^$third-party
+||tracking.myfonts.net^$third-party
+||css.typekit.net^$third-party
+*/etag-tracker/*$third-party
+*/cache-buster/*$third-party
+*/ping?cb=*$third-party
 
-! 22. REGULAR EXPRESSION (REGEX) DEEP PACKET MATCHING
-/^https?:\/\/(www\.)?([a-zA-Z0-9-]+\.)*(ad|track|stat|pixel|click)s?\.[a-z]{2,}/$third-party,xmlhttprequest
-/^https?:\/\/.*\/api\/v[0-9]+\/events?/$third-party
+! 22. REGULAR EXPRESSION (REGEX) DEEP PACKET & HEURISTIC MATCHING
+/^https?:\/\/(?:[a-z0-9-]+\.)*(?:ads?|adserver|adtrack|analytics|beacon|metrics|pixel|stat|telemetry|track|log|ingest|collect|bidd?ing)\.[a-z0-9-]+\.[a-z]{2,}/$third-party,xmlhttprequest
+/^https?:\/\/.*\/api\/v[0-9.]+\/(?:events?|logs?|metrics|telemetry|track|ingest|collect|reports?)(?:\/|\?|$)/$third-party,xmlhttprequest,ping
+/^https?:\/\/(?:trk|log|ad|stat)-[a-f0-9]{8,16}\.[a-z0-9-]+\.[a-z]{2,}/$third-party
+/^https?:\/\/[a-f0-9]{12,32}\.ad[a-z0-9-]*\.[a-z]{2,}/$third-party
+/^https?:\/\/.*\/[a-zA-Z0-9_-]{40,}(?:\.gif|\.png|\/)?(?:\?|$)/$third-party,image,xmlhttprequest
+/^https?:\/\/[a-f0-9]{10,32}\.[a-z0-9-]+\.[a-z]{2,}\/.*(?:\.gif|\.png|\.js)/$third-party
+/^https?:\/\/.*\/out(?:go|click|track|redir|bound)(?:\.php|\/|\?)/$third-party
+/^https?:\/\/.*\/aff_c\?offer_id=.*&aff_id=.*/$third-party
+/^https?:\/\/.*\/g00\//$third-party
+/^https?:\/\/.*\/pbjs\//$third-party,xmlhttprequest
+/^https?:\/\/.*\/prebid\//$third-party,script,xmlhttprequest
+/^https?:\/\/.*\/openrtb[0-9]?\//$third-party,xmlhttprequest
 
 ! 23. SERVICE WORKER & BACKGROUND SYNC QUARANTINE
-*$csp=worker-src 'none',domain=~github.com|~reddit.com
-||$websocket,third-party,domain=~discord.com|~twitch.tv
+*$csp=worker-src 'self',third-party,domain=~github.com|~reddit.com|~discord.com|~twitch.tv|~google.com|~whatsapp.com|~slack.com|~teams.microsoft.com
+*##+js(set-constant, ServiceWorkerRegistration.prototype.sync, undefined)
+*##+js(set-constant, ServiceWorkerRegistration.prototype.periodicSync, undefined)
+*##+js(set-constant, SyncManager, undefined)
+||trackingsite.com^$script
+*##+js(set-constant, window.BroadcastChannel, undefined)
+*##+js(set-constant, window.SharedWorker, undefined)
+*##+js(set-constant, navigator.sendBeacon, function() { return true; })
+*$ping,third-party
+||$websocket,third-party,domain=~discord.com|~twitch.tv|~github.com|~slack.com|~tradingview.com|~binance.com
+||$webtransport,third-party
+*##+js(set-constant, Notification.requestPermission, null)
+*##+js(set-constant, PushManager, undefined)
 
 ! 24. WEBASSEMBLY (WASM) & LOCALSTORAGE LOCKOUT
 *\.wasm$third-party
+*\.wasm?*$third-party
+*/wasm/*$third-party
+||application/wasm$third-party
+||cryptominer-site.com^##+js(set-constant, WebAssembly, undefined)
+||fingerprintjs.com^##+js(set-constant, WebAssembly, undefined)
+*##+js(abort-on-property-write, window.localStorage)
+*##+js(abort-on-property-write, window.sessionStorage)
 *##+js(abort-on-property-read, window.localStorage.setItem)
+*##+js(set-constant, window.indexedDB, undefined)
+*##+js(set-constant, window.caches, undefined)
+*##+js(set-constant, window.name, '')
+*##+js(set-constant, navigator.storage.estimate, function() { return Promise.resolve({quota: 1073741824, usage: 0}); })
+*##+js(abort-on-property-read, HTMLCanvasElement.prototype.toDataURL)
+*##+js(abort-on-property-read, HTMLCanvasElement.prototype.getImageData)
+*##+js(abort-on-property-read, WebGLRenderingContext.prototype.readPixels)
 
 ! 25. AMP (ACCELERATED MOBILE PAGES) FORCIBLE BYPASS
-*##+js(remove-attr, href, a[data-amp])
+||cdn.ampproject.org^$third-party
 ||ampproject.org^$third-party
+||ampproject.net^$third-party
+||amp.dev^$third-party
+||google.com/amp/^$third-party
+||amp-analytics.com^
+||amp-error-reporting.appspot.com^
+*/amp-analytics-*.js
+*/amp-pixel-*.js
+*/amp-auto-ads-*.js
+$removeparam=amp
+$removeparam=amp_js_v
+$removeparam=amp_gsa
+$removeparam=usqp
+##amp-auto-ads
+##amp-ad
+##amp-embed
+##amp-pixel
+##amp-analytics
+##amp-consent
+##amp-sticky-ad
+*##+js(remove-attr, href, a[data-amp])
+*##+js(remove-class, amp-viewer, body)
+*##+js(remove-attr, amp, html)
+*##html[⚡]
 
 ! 26. HARDWARE FINGERPRINT SPOOFING (Canvas & WebGL)
-*##+js(set-constant, HTMLCanvasElement.prototype.toDataURL, '')
-*##+js(set-constant, WebGLRenderingContext.prototype.getParameter, '')
+*##+js(abort-on-property-read, HTMLCanvasElement.prototype.toBlob)
+*##+js(abort-on-property-read, HTMLCanvasElement.prototype.toDataURL)
+*##+js(abort-on-property-read, WebGLRenderingContext.prototype.getSupportedExtensions)
+*##+js(abort-on-property-read, WebGL2RenderingContext.prototype.getExtension)
+*##+js(abort-on-property-read, WebGLRenderingContext.prototype.readPixels)
+*##+js(abort-on-property-read, window.OfflineAudioContext)
+*##+js(abort-on-property-read, window.webkitOfflineAudioContext)
+*##+js(set-constant, AudioBuffer.prototype.getChannelData, undefined)
+*##+js(set-constant, navigator.mediaDevices.enumerateDevices, function() { return Promise.resolve([]); })
+*##+js(set-constant, navigator.getGamepads, function() { return []; })
+*##+js(set-constant, navigator.keyboard, undefined)
+*##+js(set-constant, navigator.hid, undefined)
+*##+js(set-constant, navigator.getBattery, function() { return Promise.resolve({level: 1, charging: true, chargingTime: 0, dischargingTime: Infinity}); })
+*##+js(set-constant, navigator.connection, undefined)
+*##+js(set-constant, window.AmbientLightSensor, undefined)
+*##+js(set-constant, window.Gyroscope, undefined)
+*##+js(set-constant, window.Accelerometer, undefined)
+*##+js(set-constant, navigator.bluetooth, undefined)
+*##+js(set-constant, navigator.usb, undefined)
+*##+js(set-constant, navigator.serial, undefined)
+*##+js(abort-on-property-read, CanvasRenderingContext2D.prototype.measureText)
+*##+js(abort-on-property-read, HTMLElement.prototype.getBoundingClientRect)
 
 ! 27. WEB BLUETOOTH & USB HARDWARE PORT BLOCKING
-*##+js(abort-on-property-read, navigator.bluetooth)
-*##+js(abort-on-property-read, navigator.usb)
-*##+js(abort-on-property-read, navigator.serial)
+||127.0.0.1^$third-party,xmlhttprequest,image,websocket
+||localhost^$third-party,xmlhttprequest,image,websocket
+||192.168.*^$third-party
+||10.0.*^$third-party
+||172.16.*^$third-party
+||[::1]^$third-party
+*##+js(set-constant, navigator.xr, undefined)
+*##+js(set-constant, navigator.getVRDisplays, function() { return Promise.resolve([]); })
+*##+js(set-constant, navigator.activeVRDisplays, [])
+*##+js(set-constant, navigator.hid, undefined)
+*##+js(set-constant, navigator.nfc, undefined)
+*##+js(set-constant, navigator.serial, undefined)
+*##+js(set-constant, NDEFReader, undefined)
+*##+js(set-constant, navigator.requestMIDIAccess, function() { return Promise.reject(new Error('MIDI disabled')); })
+*##+js(set-constant, navigator.midi, undefined)
+*##+js(set-constant, navigator.connection, undefined)
+*##+js(set-constant, navigator.mozConnection, undefined)
+*##+js(set-constant, navigator.webkitConnection, undefined)
 
 ! 28. INVISIBLE OVERLAY & CLICK-HIJACKING SHIELD
-##div[style*="z-index: 2147483647"][style*="opacity: 0"]
-##a[style*="position: absolute"][style*="width: 100%"][style*="height: 100%"]
+##div[style*="z-index: 2147483647"][style*="opacity: 0"]:style(pointer-events: none !important; display: none !important;)
+##div[style*="z-index: 2147483646"][style*="opacity: 0.0"]:style(pointer-events: none !important; display: none !important;)
+##div[style*="z-index: 9999999"][style*="opacity: 0"]:style(pointer-events: none !important; display: none !important;)
+##div[style*="background: transparent"][style*="z-index: 2147483647"]:not([class]):not([id]):style(pointer-events: none !important; display: none !important;)
+##div[style*="background-color: rgba(0, 0, 0, 0)"][style*="position: fixed"]:style(pointer-events: none !important; display: none !important;)
+##div[style*="background: rgba(0,0,0,0)"][style*="position: absolute"]:style(pointer-events: none !important; display: none !important;)
+##a[style*="position: absolute"][style*="width: 100%"][style*="height: 100%"]:style(pointer-events: none !important; cursor: default !important;)
+##a[style*="position: fixed"][style*="top: 0"][style*="left: 0"][style*="width: 100vw"]:style(pointer-events: none !important;)
+##a[style*="position:fixed"][style*="inset: 0"]:style(pointer-events: none !important;)
+##iframe[style*="opacity: 0"][style*="position: absolute"]:style(pointer-events: none !important; display: none !important;)
+##iframe[style*="opacity: 0.01"]:style(pointer-events: none !important; display: none !important;)
+##iframe[style*="visibility: hidden"][style*="display: block"]:style(pointer-events: none !important; display: none !important;)
+##svg[style*="position: absolute"][style*="width: 100%"] > rect[fill-opacity="0"]:style(pointer-events: none !important;)
+##[class*="click-shield"]:style(pointer-events: none !important; display: none !important;)
+##[class*="click-trap"]:style(pointer-events: none !important; display: none !important;)
+##[id*="anti-adblock-overlay"]:style(pointer-events: none !important; display: none !important;)
 
 ! 29. FAKE "DOWNLOAD" BUTTON HEURISTICS
-##a[class*="download-button"]:not([href$=".zip"]):not([href$=".pdf"])
-##div[class*="button"]:has-text(/^Start Download$/):has(> img[src*="ad"])
+##ins.adsbygoogle:has-text(/(?:\b|_)Download(?:\b|_)|(?:\b|_)Play Now(?:\b|_)/i)
+##[id^="ad-"]:has-text(/Start Download|Play Video/i)
+##[class*="ad-zone"]:has-text(/Download Now|Click to Play/i)
+##iframe[src*="doubleclick.net"]:has-text(/Download/i)
+##a[href*="aff_id="]:has-text(/Download|Get File|Play/i)
+##a[href*="?offer_id="]:has-text(/Download|Play/i)
+##a[href*="out.php"]:has-text(/Download/i)
+/^https?:\/\/.*\/track.*\.(exe|apk|dmg|msi|bat|vbs)$/$third-party,xmlhttprequest
+##a:has(> img[src^="data:image/"]):has-text(/Download|Play|Update/i)
+##div:has(> svg[class*="download-icon"]):has-text(/Sponsored|Ad/i)
+##div:has-text(/Windows is infected|Your system is heavily damaged/i):style(display: none !important; pointer-events: none !important;)
+##div:has-text(/Flash Player might be out of date/i)
+##[class*="system-alert"]:has-text(/Virus Detected|Trojans/i)
+##.video-container > a[href^="http"]:not([href*="youtube.com"]):not([href*="vimeo.com"]):has(img[src*="play"])
+##[class*="player-overlay"]:has-text(/Watch Now|Sign up to watch/i)
 
 ! 30. DARK PATTERN & SCARCITY TIMER DEFUSION
-##.scarcity-message
+||useproof.com^$third-party
+||trustpulse.com^$third-party
+||fomo.com^$third-party
+||provesrc.com^$third-party
+||salespop.com^$third-party
+||nudgify.com^$third-party
+||wisepops.com^$third-party
+||beyondwords.io^$third-party
+##div, span, p:has-text(/Only [0-9]+ left in stock - order soon/i):style(display: none !important;)
+##div, span, p:has-text(/Selling fast!|In high demand/i):style(display: none !important;)
+##div, span, p:has-text(/([0-9]+ people are viewing this right now)/i):style(display: none !important;)
+##[class*="urgency-message"]
+##[class*="scarcity-indicator"]
+##[class*="stock-countdown"]
 ##[class*="countdown-timer"]
-##div:has-text(/Only [0-9]+ left in stock/i)
-##div:has-text(/offer ends in/i)
+##[id*="flash-sale-timer"]
+##.timer-wrapper:has-text(/Offer ends in/i)
+##[class*="deal-clock"]
+##div[data-timer-type="evergreen"]
+##a, button:has-text(/No thanks, I prefer paying full price/i):style(display: none !important;)
+##a, button:has-text(/No, I don't want to lose weight/i):style(display: none !important;)
+##a, button:has-text(/No, I hate saving money/i):style(display: none !important;)
+##[class*="confirmshame"]
+##[class*="exit-intent-popup"]
+##[id*="ouibounce-modal"]
+##[class*="newsletter-gate"]:style(display: none !important;)
+*##body:style(overflow: visible !important;)
 
 ! 31. AUDIO CONTEXT (DSP) FINGERPRINTING NEUTRALIZATION
 *##+js(abort-on-property-read, AudioContext.prototype.createOscillator)
+*##+js(abort-on-property-read, AudioContext.prototype.createAnalyser)
+*##+js(abort-on-property-read, AudioContext.prototype.createBiquadFilter)
+*##+js(abort-on-property-read, AudioContext.prototype.createDynamicsCompressor)
+*##+js(abort-on-property-read, AudioContext.prototype.createBufferSource)
 *##+js(abort-on-property-read, OfflineAudioContext.prototype.startRendering)
-*##+js(set-constant, AudioBuffer.prototype.getChannelData, '')
+*##+js(abort-on-property-read, window.OfflineAudioContext)
+*##+js(abort-on-property-read, window.webkitOfflineAudioContext)
+*##+js(set-constant, AudioBuffer.prototype.getChannelData, function() { return new Float32Array(0); })
+*##+js(set-constant, AnalyserNode.prototype.getFloatFrequencyData, function(array) { array.fill(0); return array; })
+*##+js(set-constant, AnalyserNode.prototype.getByteFrequencyData, function(array) { array.fill(0); return array; })
+*##+js(set-constant, AudioWorklet, undefined)
+*##+js(set-constant, AudioNode, undefined)
+*##+js(abort-on-property-read, BaseAudioContext.prototype.decodeAudioData)
+||audiotarget.com^$third-party
+||audiencescience.com^$third-party
+||sonic-telemetry.com^$third-party
+||audio-metrics.io^$third-party
 
 ! 32. CSS DATA EXFILTRATION & HOVER-KEYLOGGING SHIELD
-##[style*="url("]:hover
+##input[type="password"][style*="url("]
+##input[type="text"][style*="background-image: url"]
+##input[style*="url("]
+##[style*="background-image"][style*="keylogger"]
+##[style*="background"][style*="exfiltrate"]
+##[style*="url("]:hover:style(background-image: none !important; background: none !important;)
+##*:hover[style*="background-image: url"]
+##a[style*="url("]:active
+##input:focus[style*="url("]
 ||font-tracking.com^$css,third-party
 ||tracker.com/css-keylogger^$third-party
+||exfil.style^$third-party
+||css-analytics.net^$third-party
+||fonts.css-logger.com^$third-party
+*/css-exfil?$stylesheet,third-party
+*/leak.css?$stylesheet,third-party
+/^https?:\/\/.*\/css-log\?.*$/$stylesheet,third-party
+/^https?:\/\/.*\/pixel\.css.*$/$stylesheet,third-party
+/^https?:\/\/.*\/track\.css.*$/$stylesheet,third-party
+*##+js(set-constant, window.performance.now, function() { return Math.floor(Date.now() / 100) * 100; })
+*##+js(set-constant, Performance.prototype.now, function() { return Math.floor(Date.now() / 100) * 100; })
 
 ! 33. BATTERY STATUS & NETWORK SENSOR SPOOFING
 *##+js(set-constant, navigator.getBattery, undefined)
+*##+js(set-constant, window.BatteryManager, undefined)
 *##+js(set-constant, navigator.connection, undefined)
+*##+js(set-constant, navigator.mozConnection, undefined)
+*##+js(set-constant, navigator.webkitConnection, undefined)
+*##+js(set-constant, window.NetworkInformation, undefined)
 *##+js(set-constant, navigator.onLine, true)
+*##+js(set-constant, navigator.vibrate, function(){return false;})
+*##+js(set-constant, navigator.sendBeacon, function(){return true;})
+*##+js(set-constant, window.DeviceOrientationEvent, undefined)
+*##+js(set-constant, window.DeviceMotionEvent, undefined)
+*##+js(set-constant, window.AmbientLightSensor, undefined)
+*##+js(set-constant, window.Gyroscope, undefined)
+*##+js(set-constant, window.Accelerometer, undefined)
+*##+js(set-constant, window.Magnetometer, undefined)
+*##+js(set-constant, window.ProximitySensor, undefined)
+*##+js(set-constant, window.AbsoluteOrientationSensor, undefined)
+*##+js(set-constant, window.RelativeOrientationSensor, undefined)
+*##+js(set-constant, window.GravitySensor, undefined)
+*##+js(set-constant, window.LinearAccelerationSensor, undefined)
+*##+js(set-constant, navigator.credentials, undefined)
+*##+js(set-constant, navigator.permissions.query, function(){return Promise.resolve({state: 'denied'});})
+*##+js(set-constant, navigator.usb, undefined)
+*##+js(set-constant, navigator.bluetooth, undefined)
+*##+js(set-constant, navigator.serial, undefined)
+*##+js(set-constant, navigator.hid, undefined)
+*##+js(set-constant, navigator.getGamepads, function(){return [];})
 
 ! 34. INDEXEDDB, WEBSQL & LOCAL-STORAGE NUKE
 *##+js(abort-on-property-read, window.indexedDB.open)
+*##+js(abort-on-property-read, window.indexedDB.deleteDatabase)
 *##+js(abort-on-property-read, window.openDatabase)
-*##+js(abort-on-property-read, window.sessionStorage.setItem)
+*##+js(abort-on-property-read, IDBFactory.prototype.open)
+*##+js(abort-on-property-read, IDBDatabase.prototype.transaction)
+*##+js(abort-on-property-call, window.sessionStorage.setItem)
+*##+js(abort-on-property-call, window.sessionStorage.removeItem)
+*##+js(abort-on-property-call, window.sessionStorage.clear)
+*##+js(abort-on-property-call, window.localStorage.setItem)
+*##+js(abort-on-property-call, window.localStorage.removeItem)
+*##+js(abort-on-property-call, window.localStorage.clear)
+*##+js(abort-on-property-call, window.caches.open)
+*##+js(abort-on-property-call, window.caches.delete)
+*##+js(abort-on-property-call, window.caches.keys)
+*##+js(abort-on-property-call, window.caches.match)
+*##+js(abort-on-property-call, navigator.serviceWorker.register)
+*##+js(abort-on-property-read, window.requestFileSystem)
+*##+js(abort-on-property-read, window.webkitRequestFileSystem)
+*##+js(abort-on-property-read, window.showOpenFilePicker)
+*##+js(abort-on-property-read, window.showSaveFilePicker)
+*##+js(abort-on-property-read, window.showDirectoryPicker)
+*##+js(abort-on-property-read, navigator.storage.getDirectory)
+*##+js(abort-on-property-read, navigator.storage.persist)
+*##+js(abort-on-property-read, navigator.storage.estimate)
+*##+js(set-constant, window.CookieStore, undefined)
+*##+js(set-constant, window.cookieStore, undefined)
 
 ! 35. CLIPBOARD HIJACKING & PASTE-JACKING DEFENSE
 *##+js(abort-on-property-read, navigator.clipboard.writeText)
-*##+js(abort-on-property-read, document.execCommand, copy)
+*##+js(abort-on-property-read, navigator.clipboard.write)
+*##+js(abort-on-property-read, navigator.clipboard.readText)
+*##+js(abort-on-property-read, navigator.clipboard.read)
+*##+js(abort-on-property-call, document.execCommand, copy)
+*##+js(abort-on-property-call, document.execCommand, cut)
+*##+js(abort-on-property-call, document.execCommand, paste)
+*##+js(set-constant, document.queryCommandSupported, function(cmd){return false;})
+*##+js(set-constant, document.queryCommandEnabled, function(cmd){return false;})
+*##+js(set-constant, window.ClipboardEvent, undefined)
+*##+js(set-constant, window.ClipboardItem, undefined)
+*##+js(abort-on-property-call, window.getSelection)
+*##+js(abort-on-property-call, document.getSelection)
 
 ! 36. HARDWARE CONCURRENCY & CPU CORE SPOOFING
 *##+js(set-constant, navigator.hardwareConcurrency, 2)
 *##+js(set-constant, navigator.deviceMemory, 4)
+*##+js(set-constant, WorkerNavigator.prototype.hardwareConcurrency, 2)
+*##+js(set-constant, WorkerNavigator.prototype.deviceMemory, 4)
+*##+js(set-constant, navigator.oscpu, "Windows NT 10.0; Win64; x64")
+*##+js(set-constant, navigator.cpuClass, undefined)
+*##+js(set-constant, performance.memory, undefined)
+*##+js(abort-on-property-read, window.SharedArrayBuffer)
+*##+js(set-constant, navigator.deviceProfile, undefined)
+*##+js(set-constant, navigator.productSub, "20030107")
+*##+js(set-constant, navigator.vendor, "")
 
 ! 37. BEACON-API POLYFILL DESTRUCTION
-*##+js(abort-on-property-write, window.navigator.sendBeacon)
-*##+js(abort-on-property-read, window.fetch, keepalive)
+*##+js(set-constant, navigator.sendBeacon, function(){return true;})
+*##+js(abort-on-property-read, navigator.sendBeacon)
+*##+js(set-constant, Request.prototype.keepalive, false)
+*##+js(remove-attr, ping, a[ping])
+*##+js(addEventListener-defuser, unload)
+*##+js(addEventListener-defuser, beforeunload)
+*##+js(addEventListener-defuser, pagehide)
+*##+js(addEventListener-defuser, visibilitychange)
+*##+js(set-constant, document.onvisibilitychange, null)
+*##+js(set-constant, window.onpagehide, null)
+*##+js(set-constant, window.onunload, null)
+*##+js(set-constant, window.onbeforeunload, null)
+*##+js(abort-on-property-read, window.EventSource)
+*$ping,third-party
 
 ! 38. PROACTIVE TYPO-SQUATTING & HOMOGRAPH QUARANTINE
-||xn--*^$document
-||*xn--*^$third-party
+||xn--*^$all
+||*xn--*^$all
+||*.xn--*^$all
+||*--xn--*^$all
+||xn--*^$subdocument,third-party
+||*.zip^$third-party,document
+||*.mov^$third-party,document
+||*.review^$third-party
+||*.country^$third-party
+||*.kim^$third-party
+||*.science^$third-party
+||*.work^$third-party
+||*.click^$third-party
+||*.link^$third-party
+||*.top^$third-party
+||*.gq^$third-party
+||*.ml^$third-party
+||*.cf^$third-party
+||*.tk^$third-party
+||*.ga^$third-party
 
 ! 39. THIRD-PARTY IFRAME SANDBOX ATTRIBUTE INJECTION
-*##+js(remove-attr, allow, iframe[src^="http"])
+*##+js(remove-attr, allow, iframe)
 *##+js(remove-attr, allowfullscreen, iframe)
+*##+js(remove-attr, allowpaymentrequest, iframe)
+*##+js(remove-attr, autoplay, iframe)
+*##+js(remove-attr, credentialless, iframe)
+*##+js(remove-attr, loading, iframe)
+*##+js(set-constant, HTMLIFrameElement.prototype.allow, "")
+*##+js(set-constant, HTMLIFrameElement.prototype.allowFullscreen, false)
+*##+js(set-constant, HTMLIFrameElement.prototype.allowPaymentRequest, false)
+*##+js(set-constant, HTMLIFrameElement.prototype.credentialless, false)
+*##+js(abort-on-property-call, HTMLIFrameElement.prototype.requestFullscreen)
+*##+js(set-attr, sandbox, allow-scripts allow-same-origin, iframe:not([sandbox]))
 
 ! 40. DOM MUTATION OBSERVER TERMINATION (Anti-Adblock Defusion II)
 *##+js(abort-on-property-read, window.MutationObserver)
+*##+js(abort-on-property-read, window.IntersectionObserver)
+*##+js(abort-on-property-read, window.ResizeObserver)
+*##+js(abort-on-property-read, window.PerformanceObserver)
+*##+js(abort-on-property-read, window.ReportingObserver)
+*##+js(abort-on-property-read, MutationObserver.prototype.observe)
+*##+js(abort-on-property-read, IntersectionObserver.prototype.observe)
+*##+js(abort-on-property-read, ResizeObserver.prototype.observe)
+*##+js(set-constant, window.MutationEvent, undefined)
+*##+js(set-constant, document.onDOMNodeInserted, null)
+*##+js(set-constant, document.onDOMNodeRemoved, null)
+*##+js(set-constant, document.onDOMSubtreeModified, null)
 
 ! 41. CNAME CLOAKING & DNS DECEPTION ARRAY (Massive Volume)
 ||*k.omtrdc.net^$third-party
@@ -320,6 +1116,49 @@ $removeparam=obOrigUrl
 ||*wt-us.*^$third-party
 ||*a.pxi.pub^$third-party
 ||*b.pxi.pub^$third-party
+! Enterprise Marketing & Cloaked CRM Nodes
+||eulerian.net^$third-party
+||mktoresp.com^$third-party
+||en25.com^$third-party
+||pardot.com^$third-party
+||webtrends.com^$third-party
+||list-manage.com^$third-party
+||hs-analytics.net^$third-party
+||hubapi.com^$third-party
+||mktowc.com^$third-party
+||s.tealiumiq.com^$third-party
+||tiqcdn.com^$third-party
+||pippio.com^$third-party
+||agkn.com^$third-party
+||everesttech.net^$third-party
+||krxd.net^$third-party
+||imrworldwide.com^$third-party
+||wt-eu02.net^$third-party
+||2o7.net^$third-party
+||fls.doubleclick.net^$third-party
+||telemetry.*^$third-party
+||metrics.*^$third-party
+||analytics.*^$third-party
+||tracking.*^$third-party
+||tracker.*^$third-party
+||collect.*^$third-party
+||collector.*^$third-party
+||ingest.*^$third-party
+||ingestion.*^$third-party
+||events.*^$third-party
+||log.*^$third-party
+||logger.*^$third-party
+||logging.*^$third-party
+||beacon.*^$third-party
+||pixel.*^$third-party
+||stat.*^$third-party
+||stats.*^$third-party
+||tr.*^$third-party
+||trk.*^$third-party
+||track.*^$third-party
+||spoor.*^$third-party
+||smetrics.*^$third-party
+||t.info.*^$third-party
 
 ! 42. GRAPHQL & API DATA EXFILTRATION LIMITS
 *api/graphql*?query=*telemetry*$xhr
@@ -327,20 +1166,94 @@ $removeparam=obOrigUrl
 *api/graphql*?query=*logActivity*$xhr
 *api/graphql*?query=*sendBeacon*$xhr
 *api/graphql*?query=*analytics*$xhr
+*api/graphql*?query=*trackAction*$xhr
+*api/graphql*?query=*recordInteraction*$xhr
+*api/graphql*?query=*submitMetrics*$xhr
+*api/graphql*?query=*captureSession*$xhr
+*api/graphql*?query=*logEvent*$xhr
+*api/graphql*?query=*userAction*$xhr
+*api/graphql*?query=*behavioral*$xhr
+*api/graphql*?query=*performanceMetrics*$xhr
+*api/graphql*?query=*sessionPlayback*$xhr
+*api/graphql*?query=*mouseFlow*$xhr
+*api/graphql*?query=*heatmap*$xhr
+*api/graphql*?query=*errorLog*$xhr
+*api/graphql*?query=*sendTelemetry*$xhr
+*api/graphql*?query=*trackPageview*$xhr
+*api/graphql*?query=*%22telemetry%22*$xhr
+*api/graphql*?query=*%22trackEvent%22*$xhr
+*api/graphql*?query=*%22logActivity%22*$xhr
+*api/graphql*?query=*%22analytics%22*$xhr
+*api/graphql*?query=*%22userAction%22*$xhr
+*api/graphql*?query=*%22captureSession%22*$xhr
 /api/v1/telemetry/$xhr
+/api/v2/telemetry/$xhr
+/api/v3/telemetry/$xhr
+/api/v1/metrics/$xhr
 /api/v2/metrics/$xhr
+/api/v3/metrics/$xhr
+/api/v1/track/$xhr
+/api/v2/track/$xhr
+/api/v1/collect/$xhr
+/api/v2/collect/$xhr
+/api/v1/ingest/$xhr
+/api/v2/ingest/$xhr
+/api/v1/events/$xhr
+/api/v2/events/$xhr
 /api/log/ui_events/$xhr
+/api/log/batch/$xhr
+/api/log/session/$xhr
+/api/logger/event/$xhr
+/api/tracker/batch/$xhr
+/api/telemetry/ingest/$xhr
+/api/analytics/collect/$xhr
+/webhook/track/$xhr
+/webhook/event/$xhr
+/webhook/telemetry/$xhr
+/log/error/batch/$xhr
+/metrics/ui/$xhr
+*/batch?*requests=*track*$xhr
+*/bulk?*events=*$xhr
+*/ingest?*payload=*$xhr
+*/collect?*data=*$xhr
+*/log?*event=*$xhr
+*/track?*action=*$xhr
+*/beacon?*metrics=*$xhr
+*/v1/b/*$xhr
+*/v1/t/*$xhr
+*/v1/e/*$xhr
 
 ! 43. HARDWARE SENSOR SPOOFING: GYROSCOPE, VR & GAMEPADS
 *##+js(abort-on-property-read, navigator.getGamepads)
+*##+js(abort-on-property-read, navigator.webkitGetGamepads)
+*##+js(abort-on-property-read, window.GamepadEvent)
 *##+js(abort-on-property-read, navigator.getVRDisplays)
+*##+js(abort-on-property-read, navigator.activeVRDisplays)
 *##+js(abort-on-property-read, navigator.xr)
+*##+js(set-constant, navigator.xr, undefined)
+*##+js(abort-on-property-read, window.XRSession)
+*##+js(abort-on-property-read, window.XRSystem)
+*##+js(abort-on-property-read, window.XRFrame)
 *##+js(abort-on-property-read, window.DeviceOrientationEvent)
 *##+js(abort-on-property-read, window.DeviceMotionEvent)
+*##+js(abort-on-property-read, window.DeviceOrientationEvent.requestPermission)
+*##+js(set-constant, window.Sensor, undefined)
+*##+js(set-constant, window.Gyroscope, undefined)
+*##+js(set-constant, window.Accelerometer, undefined)
+*##+js(set-constant, window.LinearAccelerationSensor, undefined)
+*##+js(set-constant, window.AbsoluteOrientationSensor, undefined)
+*##+js(set-constant, window.RelativeOrientationSensor, undefined)
+*##+js(set-constant, window.AmbientLightSensor, undefined)
+*##+js(set-constant, window.Magnetometer, undefined)
 *##+js(set-constant, navigator.maxTouchPoints, 0)
+*##+js(set-constant, navigator.msMaxTouchPoints, 0)
+*##+js(set-constant, window.ontouchstart, null)
 *##+js(set-constant, navigator.pdfViewerEnabled, false)
+*##+js(set-constant, navigator.javaEnabled, function(){return false;})
+*##+js(set-constant, navigator.plugins, [])
+*##+js(set-constant, navigator.mimeTypes, [])
 
-! 44. WEBSOCKET (WSS) TELEMETRY SNIFFING & QUARANTINE
+! 44. OMEGA WEBSOCKET (WSS) & WEBTRANSPORT TELEMETRY QUARANTINE
 ||wss://*tracking*^$websocket
 ||wss://*metrics*^$websocket
 ||wss://*telemetry*^$websocket
@@ -348,30 +1261,141 @@ $removeparam=obOrigUrl
 ||wss://*analytics*^$websocket
 ||wss://*events*^$websocket
 ||wss://*log.stream*^$websocket
+||wss://*ingest*^$websocket
+||wss://*collect*^$websocket
+||wss://*beacon*^$websocket
+||wss://*pixel*^$websocket
+||wss://*stat.*^$websocket
+||wss://*stats.*^$websocket
+||wss://*session*^$websocket
+||wss://*replay*^$websocket
+||wss://*heatmap*^$websocket
+||wss://*mouseflow*^$websocket
+||wss://*behavior*^$websocket
+||wss://*activity*^$websocket
+||wss://*performance*^$websocket
+||wss://*monitor*^$websocket
+||wss://*trace*^$websocket
+||wss://*diagnostic*^$websocket
+||wss://*crash*^$websocket
+||wss://*error-log*^$websocket
+||wss://*sentry*^$websocket
+||wss://*datadog*^$websocket
+||wss://*bugsnag*^$websocket
+||wss://*raygun*^$websocket
+||wss://*newrelic*^$websocket
+*##+js(abort-on-property-read, window.WebTransport)
+*##+js(set-constant, window.WebTransport, undefined)
+||*tracking*^$webtransport
+||*telemetry*^$webtransport
+||*analytics*^$webtransport
+||*metrics*^$webtransport
+||*ingest*^$webtransport
+||*logger*^$webtransport
+||*events*^$webtransport
+||*session*^$webtransport
+
 
 ! 45. POLYMORPHIC REGEX SWARM (Maximum Mathematical Matching)
-/^https?:\/\/[a-z0-9-]+\.([a-z0-9-]+\.)*(tracker|analytics|log|stats)\./$third-party
-/^https?:\/\/[a-z0-9-]+\.([a-z0-9-]+\.)*(metrics|telemetry|beacon)\./$third-party
-/^https?:\/\/.*\/track(\/|\?)/$third-party
-/^https?:\/\/.*\/log(\/|\?)/$third-party
-/^https?:\/\/.*\/collect(\/|\?)/$third-party,xmlhttprequest
-/^https?:\/\/.*\/pixel(\/|\.gif)/$image,third-party
+/^https?:\/\/[a-z0-9-]+\.(?:[a-z0-9-]+\.)*(?:tracker|tracking|analytics|log|logger|stats|metrics|telemetry|beacon|pixel|collect|ingest|events?|eventlog|click|events-api|collector|measurement|vitals|perf)\./$third-party,important
+/^https?:\/\/[a-z0-9-]+\.(?:[a-z0-9-]+\.)*(?:measure|auditing|monitor|monitoring|insight|insights|bi|session|replay|heatmap|mouseflow|telemetries|data-collector|observability|rum)\./$third-party
+/^https?:\/\/[a-z0-9-]+\.(?:[a-z0-9-]+\.)*(?:adserver|adexchange|rtb|bidder|yield|syndication|monetization|conversion|attribution|tagmanager|tag-manager|ssp|dsp|dmp)\./$third-party
+/^https?:\/\/[^\/]+\/(?:track|log|collect|ingest|metric|event|telemetry|beacon|hit|ping|stat|action)(?:s|er|ing|ion|or)?(?:[\/?]|$)/$third-party
+/^https?:\/\/[^\/]+\/api\/(?:v[0-9]+|web|rest)\/(?:track|collect|ingest|metrics|events|log|stats|beacon|telemetry)/$third-party,xmlhttprequest
+/^https?:\/\/[^\/]+\/v[0-9]+\/(?:b|t|e|s|m|p|i|c)\/(?:[a-zA-Z0-9_-]{10,})/$third-party
+/^https?:\/\/[^\/]+\/(?:__utm|__ga|__fb|__tw)\.gif.*$/$image,third-party
+/^https?:\/\/[^\/]+\/(?:pixel|i|p|tr|track|blank|empty|clear|zero|space)\.(?:gif|png|jpg|webp)(?:[\/?]|$)/$image,third-party,important
+/^https?:\/\/[^\/]+\/p(?:ixel)?\.gif\?.*(?:id|uid|cid|sess)=/$image,third-party
+/^https?:\/\/[^\/]+\/t(?:rack)?\/(?:[a-zA-Z0-9_-]+)\.gif/$image,third-party
+/^https?:\/\/[^\/]+\/session\/(?:replay|record|capture|stream|playback|sync|mouse|scroll)/$third-party,xmlhttprequest
+/^https?:\/\/[^\/]+\/heatmap\/(?:data|collect|event|click|scroll|move)/$third-party
+/^https?:\/\/[^\/]+\/mouseflow\/(?:collect|index|ws|track)/$third-party
+/^https?:\/\/[^\/]+\/(?:ux|clarity|hotjar|fullstory|logrocket|smartlook|inspectlet|crazyegg|ptengine)\.js(?:[\/?]|$)/$script,third-party
+/^https?:\/\/[^\/]+\/rec\/(?:api|ingest|v[0-9])\//$third-party
+/^wss?:\/\/[^\/]+\/(?:track|socket\.io|websocket|stream)\/\?.*(?:client_id|tracker|session|vid|uid)=/$websocket,third-party
+/^https?:\/\/[^\/]+\/(?:fingerprint|fp|canvas|webgl|audio|font|device_id|client_id|browser_id)(?:js)?\.(?:js|php|asp)(?:[\/?]|$)/$script,third-party,important
+/^https?:\/\/[^\/]+\/api\/v[0-9]+\/(?:fp|fingerprint|ident|id)\//$third-party
+/^https?:\/\/[^\/]+\/.*(?:device|client)info.*\.js$/$script,third-party
+/^https?:\/\/[^\/]+\/(?:consent|cmp|gdpr|ccpa)\/(?:track|log|sync)/$third-party
+/^https?:\/\/[^\/]+\/sync\/(?:cookie|id|profile|user)(?:[\/?]|$)/$third-party
 
 ! 46. IP-LEVEL AUTONOMOUS SYSTEM & CLUSTER BLOCKS
-! Blocks entire server clusters known exclusively for ad-bidding.
 ||13.249.*^$third-party
-||54.239.*^$third-party
+||13.224.*^$third-party
+||18.232.*^$third-party
 ||34.216.*^$third-party
 ||52.84.*^$third-party
-||18.232.*^$third-party
-||142.250.*^$third-party,domain=~google.com|~youtube.com
-||172.217.*^$third-party,domain=~google.com|~youtube.com
+||52.85.*^$third-party
+||54.192.*^$third-party
+||54.239.*^$third-party
+||99.84.*^$third-party
+||143.204.*^$third-party
+||18.192.*^$third-party
+||3.224.*^$third-party
+||142.250.*^$third-party,domain=~google.com|~youtube.com|~gstatic.com|~googleapis.com|~recaptcha.net
+||172.217.*^$third-party,domain=~google.com|~youtube.com|~gstatic.com|~googleapis.com|~recaptcha.net
+||216.58.*^$third-party,domain=~google.com|~youtube.com|~recaptcha.net
+||108.177.*^$third-party,domain=~google.com|~youtube.com
+||173.194.*^$third-party,domain=~google.com|~youtube.com
+||74.125.*^$third-party,domain=~google.com|~youtube.com
+||209.85.*^$third-party,domain=~google.com|~youtube.com
+||23.32.*^$third-party
+||23.60.*^$third-party
+||104.68.*^$third-party
+||104.96.*^$third-party
+||151.101.*^$third-party
+||184.50.*^$third-party
+||198.143.*^$third-party
+||199.27.*^$third-party
+||199.232.*^$third-party
+||23.218.*^$third-party
+||23.219.*^$third-party
+||104.16.*^$third-party,domain=~cloudflare.com
+||104.17.*^$third-party,domain=~cloudflare.com
+||104.18.*^$third-party,domain=~cloudflare.com
+||104.19.*^$third-party,domain=~cloudflare.com
+||104.20.*^$third-party,domain=~cloudflare.com
+||172.64.*^$third-party,domain=~cloudflare.com
+||172.67.*^$third-party,domain=~cloudflare.com
+||31.13.*^$third-party,domain=~facebook.com|~fbcdn.net|~instagram.com|~whatsapp.com
+||69.171.*^$third-party,domain=~facebook.com|~fbcdn.net|~instagram.com|~whatsapp.com
+||157.240.*^$third-party,domain=~facebook.com|~fbcdn.net|~instagram.com|~whatsapp.com
+||173.252.*^$third-party,domain=~facebook.com|~fbcdn.net|~instagram.com
+||64.124.*^$third-party,important
+||199.16.*^$third-party,important
+||209.170.*^$third-party,important
+||66.211.16.*^$third-party
+||8.29.230.*^$third-party
+||192.28.146.*^$third-party
+||192.150.16.*^$third-party
+||130.248.*^$third-party
+||192.243.250.*^$third-party
+||[2607:f8b0:4005::]*^$third-party,domain=~google.com|~youtube.com
+||[2a03:2880:f100::]*^$third-party,domain=~facebook.com|~instagram.com
+||[2620:109:c000::]*^$third-party
+||[2600:1400:a::]*^$third-party
 
-! 47. BASE64 & OBFUSCATED SCRIPT EXECUTION BLOCKS
-*$script,redirect-rule=noop.js,domain=base64-tracking.com
-*##+js(abort-on-property-read, window.atob, tracking)
-*##+js(abort-on-property-read, window.btoa, telemetry)
-||*data:application/javascript;base64,*$script,third-party
+! 47. OMEGA BASE64, OBFUSCATION & STEALTH EXECUTION DEFUSAL
+*$script,redirect-rule=noop.js,domain=base64-tracking.com|b64-analytics.net|obfus-track.io
+||*data:application/javascript;base64,*$script,third-party,important
+/^https?:\/\/[^\/]+\/.*[a-zA-Z0-9+\/]{100,}={0,2}$/$xmlhttprequest,third-party
+*##+js(abort-current-inline-script, window.atob, /tracker|metrics|telemetry|fingerprint/)
+*##+js(abort-current-inline-script, window.btoa, /tracker|metrics|telemetry|fingerprint/)
+*##+js(abort-on-property-read, window.eval, /adsystem|tracking|collect/)
+*##+js(abort-current-inline-script, document.write, /<script.*src=.*(ad|track|log|pixel)/)
+*##+js(set-constant, _0x, undefined)
+*##+js(set-constant, webpackJsonp, undefined)
+*##+js(prevent-fetch, /base64|obfuscated|packed/, /.*/)
+*##+js(prevent-xhr, /base64|obfuscated|packed/, /.*/)
+||*$third-party,ext=wasm,important
+/^https?:\/\/[^\/]+\/.*\.wasm$/$third-party,xmlhttprequest
+*##+js(abort-on-property-read, WebAssembly.instantiateStreaming)
+*##+js(abort-on-property-read, WebAssembly.compileStreaming)
+||*$worker,third-party,domain=~github.com|~gitlab.com
+*##+js(abort-on-property-read, navigator.serviceWorker.register, /track|ad|metric|sw-telemetry/)
+*##+js(abort-on-property-read, window.SharedWorker, /track|analytics/)
+*##+js(setTimeout-defuser, /track|analytics|log|beacon/)
+*##+js(setInterval-defuser, /track|analytics|log|beacon/)
 
 ! 48. REAL-TIME BIDDING (RTB) & AD-EXCHANGE SINGULARITY
 ||rubiconproject.com^$third-party
@@ -380,32 +1404,82 @@ $removeparam=obOrigUrl
 ||pubmatic.com^$third-party
 ||indexexchange.com^$third-party
 ||casalemedia.com^$third-party
-||criteo.com^$third-party
-||outbrainimg.com^$third-party
-||taboola.com^$third-party
-||yieldmo.com^$third-party
-||sharethrough.com^$third-party
-||teads.tv^$third-party
 ||smartadserver.com^$third-party
 ||bidswitch.net^$third-party
 ||adsrvr.org^$third-party
 ||rlcdn.com^$third-party
+||tremorhub.com^$third-party
+||sovrn.com^$third-party
+||mopub.com^$third-party
+||smaato.net^$third-party
+||yieldlab.net^$third-party
+||improve-digital.com^$third-party
+||criteo.com^$third-party
+||criteo.net^$third-party
+||thetradedesk.com^$third-party
+||turn.com^$third-party
+||mediamath.com^$third-party
+||dataxu.com^$third-party
+||liveramp.com^$third-party
+||pippio.com^$third-party
+||neustar.biz^$third-party
+||agkn.com^$third-party
+||bluekai.com^$third-party
+||exelator.com^$third-party
+||lotame.com^$third-party
+||demdex.net^$third-party
+||tapad.com^$third-party
+||datalogix.com^$third-party
+||outbrain.com^$third-party
+||outbrainimg.com^$third-party
+||taboola.com^$third-party
+||taboola.net^$third-party
+||yieldmo.com^$third-party
+||sharethrough.com^$third-party
+||teads.tv^$third-party
+||revcontent.com^$third-party
+||mgid.com^$third-party
+||zergnet.com^$third-party
+||dianomi.com^$third-party
+||nativo.com^$third-party
+||*^/prebid.js$script,third-party
+||*^/header-bidding.js$script,third-party
+||*^/pb.js$script,third-party
+||*^/headerbid.js$script,third-party
+/^https?:\/\/[^\/]+\/.*(prebid|headerbid|auction|bidder).*\.js$/$script,third-party
+/^https?:\/\/[^\/]+\/(?:openrtb|ortb|bid|auction|sync)\/?$/$xmlhttprequest,third-party
+/^https?:\/\/[^\/]+\/(?:idsync|usersync|match|cookie_sync|pixel_sync)/$third-party
+||*^/user-sync.html$subdocument,third-party
+||*^/cookie-sync.html$subdocument,third-party
+*##+js(cookie-remover, /^(tuuid|tap.vid|rl_user_id|crto_|id5|pubcid)/)
 
 ! 49. FONT, GLYPH & TYPOGRAPHIC FINGERPRINTING
-*##+js(abort-on-property-read, CanvasRenderingContext2D.prototype.measureText)
-*##+js(abort-on-property-read, CanvasRenderingContext2D.prototype.fillText)
-||use.typekit.net^$third-party
-||fast.fonts.net^$third-party
-||cloud.typography.com^$third-party
+*##+js(abort-on-property-write, window.MutationObserver)
+*##+js(abort-on-property-read, document.documentElement.appendChild, /track|pixel|beacon|analytics/)
+*##+js(abort-on-property-read, document.body.appendChild, /track|pixel|beacon|analytics/)
+*##+js(abort-on-property-read, Element.prototype.attachShadow)
+*##+js(remove-attr, src, iframe[src*="adserver"])
+*##+js(remove-attr, src, iframe[src*="track"])
+||*$subdocument,third-party,domain=~youtube.com|~vimeo.com|~github.com
+*##+js(addEventListener-defuser, scroll, /track|mouseflow|hotjar|clarity/)
+*##+js(addEventListener-defuser, mousemove, /track|mouseflow|hotjar|clarity/)
+*##+js(addEventListener-defuser, keydown, /keylogger|behavior|biometric/)
+*##+js(addEventListener-defuser, visibilitychange, /beacon|ping|unload/)
 
 ! 50. ZERO-DAY PHISHING & HOMOGRAPH HEURISTICS
-##form[action*="login"][action*="http:"]
-##input[type="password"][style*="opacity: 0"]
-##input[type="password"][style*="position: absolute"]
-##div[class*="phish"]
-##div[class*="scam"]
-##iframe[src*="ngrok.io"]
-##iframe[src*="serveo.net"]
-
-##div:has-text(/^Реклама$/)
-!-------------------------------------------------------------------------------
+||*.gq^$third-party
+||*.cf^$third-party
+||*.tk^$third-party
+||*.ml^$third-party
+||*.ga^$third-party
+||*.top^$third-party
+||*.date^$third-party
+||*.click^$third-party
+||*.xyz^$third-party,important
+||*$ping,third-party,important
+*##+js(abort-on-property-read, navigator.sendBeacon)
+/^https?:\/\/[^\/]+\/.*(ping|beacon|unload|leave)\/?(?:[?#].*)?$/$xmlhttprequest,third-party
+||*$font,third-party,domain=~fonts.gstatic.com|~use.typekit.net
+*##+js(abort-on-property-read, document.fonts.ready)
+*##+js(csp, script-src 'self' 'unsafe-eval' https://*.google.com https://*.youtube.com)
+*##+js(csp, connect-src 'self' https://*.api.yoursite.com)
