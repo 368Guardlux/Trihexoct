@@ -1,4 +1,3 @@
-
 [Trihexoct]
 ! Title: 🛡️ Trihexoct 🛡️
 ! Homepage: https://github.com/lomibaobalong-png/Trihexoct
