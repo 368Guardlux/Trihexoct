@@ -1,7 +1,7 @@
 [Trihexoct Guardlux AI]
 ! Title: 🛡️ Trihexoct Guardlux AI 🛡️
 ! Homepage: https://github.com/lomibaobalong-png/Trihexoct
-! Author: lomibaobalong-png
+! Author: 368Guardlux AI
 ! Expires: 1 hour
 ! Version: 1.1.0
 ! Last modified: 11 Aug 2026
