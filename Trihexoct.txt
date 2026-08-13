@@ -1,5 +1,5 @@
-[Trihexoct]
-! Title: 🛡️ Trihexoct 🛡️
+[Trihexoct Guardlux AI]
+! Title: 🛡️ Trihexoct Guardlux AI 🛡️
 ! Homepage: https://github.com/lomibaobalong-png/Trihexoct
 ! Author: lomibaobalong-png
 ! Expires: 1 hour
