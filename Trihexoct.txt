@@ -1,5 +1,5 @@
 [Trihexoct Guardlux]
-! Title: 🛡️ Trihexoct Guardlux AI 🛡️
+! Title: 🛡️ Trihexoct Guardlux 🛡️
 ! Homepage: https://github.com/lomibaobalong-png/Trihexoct
 ! Author: 368Guardlux AI
 ! Expires: 1 hour
