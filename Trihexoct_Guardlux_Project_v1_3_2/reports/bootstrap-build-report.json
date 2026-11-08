@@ -1,0 +1,65 @@
+{
+  "covered_rule_categories": {
+    "cosmetic": 0,
+    "network": 0,
+    "path_or_regex": 0,
+    "url_parameter": 0
+  },
+  "effective_rule_categories": {
+    "cosmetic": 85,
+    "network": 662,
+    "path_or_regex": 9,
+    "url_parameter": 77
+  },
+  "feed_count_anomalies": [],
+  "feed_retries": 0,
+  "fetch_workers": 0,
+  "generated_at_utc": "2026-10-20T23:08:28Z",
+  "manual_anomaly_override_used": false,
+  "manual_output_delta_override_used": false,
+  "note": "Offline build does not claim online overlap analysis. Filter syntax lint is not a browser engine parser or live-site test.",
+  "output": "Trihexoct.txt",
+  "output_delta": {
+    "added_count": 0,
+    "added_examples": [],
+    "candidate_active_rules": 833,
+    "changed_count": 0,
+    "changed_ratio": 0.0,
+    "gate_applied": false,
+    "gate_passed": true,
+    "manual_override_used": false,
+    "maximum_change_ratio": 0.4,
+    "policy_note": "Large live-reconciliation changes require review; override only after inspecting the delta report.",
+    "previous_active_rules": 833,
+    "removed_count": 0,
+    "removed_examples": []
+  },
+  "output_sha256": "74bd6dc4ad04641f9b7823bc80b64a97fb90a8ca0ab0b9b4c85930a23f53ded6",
+  "overlap_policy_version": "2.1",
+  "overlap_removal_examples": [],
+  "project_version": "1.3.2",
+  "published_active_rules": 833,
+  "published_rule_categories": {
+    "cosmetic": 85,
+    "network": 662,
+    "path_or_regex": 9,
+    "url_parameter": 77
+  },
+  "reference_coverage_complete": false,
+  "reference_feeds": [
+    {
+      "error": "offline bootstrap build; online coverage not checked",
+      "name": "reference feeds",
+      "ok": false
+    }
+  ],
+  "reference_registry_sha256": "7b400459bf0f97dba515c9222694447ef60adc7d957f6f6eb3140419588c885a",
+  "removed_exact_and_covered_rules": 0,
+  "schema_version": 1,
+  "source_exact_duplicates_removed": 0,
+  "source_module_count": 16,
+  "source_unique_rules": 833,
+  "successful_feed_count": 0,
+  "successful_feed_groups": {},
+  "total_feed_count": 0
+}
