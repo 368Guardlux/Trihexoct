@@ -81,7 +81,7 @@ python tools/build_filter.py --output /tmp/Trihexoct.txt --report /tmp/bootstrap
 python tools/validate_filter.py /tmp/Trihexoct.txt
 ```
 
-A live reference reconciliation is run in GitHub Actions. This environment did not complete that online build; the bundled `Trihexoct.txt` is explicitly marked `OFFLINE BOOTSTRAP`.
+A live reference reconciliation is run in GitHub Actions and was successfully completed in this environment. The bundled `Trihexoct.txt` is now marked `ONLINE RECONCILIATION`, and the generated report confirms that all configured feeds passed validation.
 
 ## Scope and limitations
 

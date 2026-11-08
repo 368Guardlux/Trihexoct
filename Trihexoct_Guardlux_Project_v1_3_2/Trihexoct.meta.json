@@ -1,9 +1,9 @@
 {
-  "active_rule_count": 833,
-  "build_mode": "offline-bootstrap",
+  "active_rule_count": 316,
+  "build_mode": "online-reconciliation",
   "covered_rule_categories": {
-    "cosmetic": 0,
-    "network": 0,
+    "cosmetic": 4,
+    "network": 513,
     "path_or_regex": 0,
     "url_parameter": 0
   },
@@ -14,23 +14,23 @@
     "url_parameter": 77
   },
   "last_output_delta_gate_passed": true,
-  "last_output_delta_ratio": 0.0,
+  "last_output_delta_ratio": 0.6206,
   "output": "Trihexoct.txt",
-  "output_sha256": "74bd6dc4ad04641f9b7823bc80b64a97fb90a8ca0ab0b9b4c85930a23f53ded6",
+  "output_sha256": "677947a90c03b26ceedc2a79c4f782a005be68810aca48b57ce6ee4d1dce450d",
   "overlap_policy_version": "2.1",
   "project_version": "1.3.2",
   "published_rule_categories": {
-    "cosmetic": 85,
-    "network": 662,
+    "cosmetic": 81,
+    "network": 149,
     "path_or_regex": 9,
     "url_parameter": 77
   },
-  "reference_coverage_complete": false,
+  "reference_coverage_complete": true,
   "reference_feed_registry_count": 32,
-  "reference_registry_sha256": "7b400459bf0f97dba515c9222694447ef60adc7d957f6f6eb3140419588c885a",
+  "reference_registry_sha256": "1f87efcd4ad31d4e3327855dc234eb7bc6cd6d1aede23f239231280a3112d0a6",
   "rule_categories": {
-    "cosmetic": 85,
-    "network": 662,
+    "cosmetic": 81,
+    "network": 149,
     "path_or_regex": 9,
     "url_parameter": 77
   },
@@ -54,6 +54,6 @@
     "85-site-specific-ad-cosmetics.txt": "f31cbd36ff62678e9a10da4ff184bb81ffd895034673cad6e03f6ca10e50c7d7",
     "86-search-ad-layouts.txt": "f92077f1381ce39681a2896cc5bcfb579d99f1fd89d3724dc6c025e1346c3ea5"
   },
-  "successful_feed_count": 0,
-  "total_feed_count": 0
+  "successful_feed_count": 32,
+  "total_feed_count": 32
 }

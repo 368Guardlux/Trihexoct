@@ -732,7 +732,17 @@ def main():
     parser.add_argument('--report',type=Path,default=ROOT/'reports'/'build-report.json')
     args=parser.parse_args()
     try:
-        compile_list(args.fetch_references,args.require_primary,args.output.resolve(),args.report.resolve(),args.min_successful_feeds,args.accept_feed_anomaly,args.workers,args.retries)
+        compile_list(
+            args.fetch_references,
+            args.require_primary,
+            args.output.resolve(),
+            args.report.resolve(),
+            args.min_successful_feeds,
+            args.accept_feed_anomaly,
+            args.workers,
+            args.retries,
+            args.accept_large_output_change,
+        )
     except Exception as exc:
         print('ERROR:',exc,file=sys.stderr); return 2
     return 0

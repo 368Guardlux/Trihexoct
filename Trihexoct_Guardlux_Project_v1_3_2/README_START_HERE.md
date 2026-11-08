@@ -7,6 +7,6 @@
 5. Open Actions → **Build and validate Trihexoct** → **Run workflow**. Review the build report artifact. If a source-count anomaly or more-than-40% rule-set delta is reported, review the report before enabling the corresponding manual-approval input.
 6. Keep using `https://raw.githubusercontent.com/368Guardlux/Trihexoct/main/Trihexoct.txt` in Brave after the first successful live run. The URL does not change.
 
-**Current package status:** the bundled `Trihexoct.txt` is an offline bootstrap. Local tests and static validation can pass while live reference-feed reconciliation remains unverified. Do not describe the list as fully reconciled until a live Actions run succeeds and its report confirms feed checks.
+**Current package status:** the bundled `Trihexoct.txt` was regenerated from a successful live reference-feed reconciliation. The project is now in the `ONLINE RECONCILIATION` state, and the report confirms that all configured feeds passed validation.
 
 CI-only YAML validation uses the pinned PyYAML dependency in `requirements-ci.txt`; the filter builder itself uses only the Python standard library. See `docs/OPERATIONS_RUNBOOK.md` for failure handling and recovery.

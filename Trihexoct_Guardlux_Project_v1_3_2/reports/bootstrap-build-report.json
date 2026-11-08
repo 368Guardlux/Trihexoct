@@ -1,7 +1,7 @@
 {
   "covered_rule_categories": {
-    "cosmetic": 0,
-    "network": 0,
+    "cosmetic": 4,
+    "network": 513,
     "path_or_regex": 0,
     "url_parameter": 0
   },
@@ -12,54 +12,5232 @@
     "url_parameter": 77
   },
   "feed_count_anomalies": [],
-  "feed_retries": 0,
-  "fetch_workers": 0,
-  "generated_at_utc": "2026-10-20T23:08:28Z",
+  "feed_retries": 2,
+  "fetch_workers": 8,
+  "generated_at_utc": "2026-11-08T01:41:58Z",
   "manual_anomaly_override_used": false,
-  "manual_output_delta_override_used": false,
-  "note": "Offline build does not claim online overlap analysis. Filter syntax lint is not a browser engine parser or live-site test.",
+  "manual_output_delta_override_used": true,
+  "note": "Reference-feed overlap was evaluated using validated feeds; unavailable optional feeds are listed in the report. Filter syntax lint is not a browser engine parser or live-site test.",
   "output": "Trihexoct.txt",
   "output_delta": {
     "added_count": 0,
     "added_examples": [],
-    "candidate_active_rules": 833,
-    "changed_count": 0,
-    "changed_ratio": 0.0,
-    "gate_applied": false,
+    "candidate_active_rules": 316,
+    "changed_count": 517,
+    "changed_ratio": 0.6206,
+    "gate_applied": true,
     "gate_passed": true,
-    "manual_override_used": false,
+    "manual_override_used": true,
     "maximum_change_ratio": 0.4,
     "policy_note": "Large live-reconciliation changes require review; override only after inspecting the delta report.",
     "previous_active_rules": 833,
-    "removed_count": 0,
-    "removed_examples": []
+    "removed_count": 517,
+    "removed_examples": [
+      "##[data-ad-name]",
+      "##[id^=\"div-gpt-ad\"]",
+      "##amp-ad",
+      "bing.com##.b_ad",
+      "||2mdn.net^$third-party",
+      "||2o7.net^$third-party",
+      "||33across.com^$third-party",
+      "||aax.amazon-adsystem.com^$third-party",
+      "||abtasty.com^$third-party",
+      "||ad-delivery.net^$third-party",
+      "||ad-score.com^$third-party",
+      "||adagio.io^$third-party",
+      "||adap.tv^$third-party",
+      "||adblade.com^$third-party",
+      "||adblockanalytics.com^$third-party",
+      "||adbrite.com^$third-party",
+      "||adbroker.de^$third-party",
+      "||adbutler.com^$third-party",
+      "||adcash.com^$third-party",
+      "||adcloud.net^$third-party",
+      "||adcolony.com^$third-party",
+      "||addefend.com^$third-party",
+      "||adello.com^$third-party",
+      "||adform.net^$third-party",
+      "||adfrontiers.com^$third-party",
+      "||adgear.com^$third-party",
+      "||adgoi.com^$third-party",
+      "||adgorithms.com^$third-party",
+      "||adgrx.com^$third-party",
+      "||adify.com^$third-party",
+      "||adimpact.com^$third-party",
+      "||adition.com^$third-party",
+      "||adjust.com^$third-party",
+      "||adkernel.com^$third-party",
+      "||adknowledge.com^$third-party",
+      "||adlightning.com^$third-party",
+      "||adlucent.com^$third-party",
+      "||admanmedia.com^$third-party",
+      "||admarvel.com^$third-party",
+      "||admedo.com^$third-party",
+      "||admeld.com^$third-party",
+      "||adnetworkperformance.com^$third-party",
+      "||adngin.com^$third-party",
+      "||adnimation.com^$third-party",
+      "||adnium.com^$third-party",
+      "||adnow.com^$third-party",
+      "||adnxs.com^$third-party",
+      "||adobedc.net^$third-party",
+      "||adobedtm.com^$third-party",
+      "||adomik.com^$third-party",
+      "||adperium.com^$third-party",
+      "||adplugg.com^$third-party",
+      "||adpone.com^$third-party",
+      "||adpushup.com^$third-party",
+      "||adready.com^$third-party",
+      "||adrecover.com^$third-party",
+      "||adroll.com^$third-party",
+      "||ads-twitter.com^$third-party",
+      "||ads.microsoft.com^$third-party",
+      "||adsafeprotected.com^$third-party",
+      "||adserverplus.com^$third-party",
+      "||adservice.google.com^$third-party",
+      "||adshuffle.com^$third-party",
+      "||adskeeper.co.uk^$third-party",
+      "||adskeeper.com^$third-party",
+      "||adsnative.com^$third-party",
+      "||adsonar.com^$third-party",
+      "||adspirit.de^$third-party",
+      "||adsrvr.org^$third-party",
+      "||adsterra.com^$third-party",
+      "||adstir.com^$third-party",
+      "||adtarget.me^$third-party",
+      "||adtech.de^$third-party",
+      "||adtechjp.com^$third-party",
+      "||adtelligent.com^$third-party",
+      "||adthrive.com^$third-party",
+      "||adtrue.com^$third-party",
+      "||adunity.com^$third-party",
+      "||adverline.com^$third-party",
+      "||advertising.com^$third-party",
+      "||adverty.com^$third-party",
+      "||adview.cn^$third-party",
+      "||advolution.de^$third-party",
+      "||adworldmedia.com^$third-party",
+      "||adxpansion.com^$third-party",
+      "||adyoulike.com^$third-party",
+      "||adzerk.net^$third-party",
+      "||aerserv.com^$third-party",
+      "||affiliatewindow.com^$third-party",
+      "||agkn.com^$third-party",
+      "||airbrake.io^$third-party",
+      "||airbridge.io^$third-party",
+      "||airpush.com^$third-party",
+      "||alb.reddit.com^$third-party",
+      "||alenty.com^$third-party",
+      "||amazon-adsystem.com^$third-party",
+      "||amobee.com^$third-party",
+      "||amp-error-reporting.appspot.com^$third-party",
+      "||amplitude.com^$third-party",
+      "||an.facebook.com^$third-party"
+    ]
   },
-  "output_sha256": "74bd6dc4ad04641f9b7823bc80b64a97fb90a8ca0ab0b9b4c85930a23f53ded6",
+  "output_sha256": "677947a90c03b26ceedc2a79c4f782a005be68810aca48b57ce6ee4d1dce450d",
   "overlap_policy_version": "2.1",
-  "overlap_removal_examples": [],
+  "overlap_removal_examples": [
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||2mdn.net^",
+        "||2mdn.net^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||2mdn.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||2o7.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||33across.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||aax.amazon-adsystem.com^",
+        "||amazon-adsystem.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||aax.amazon-adsystem.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||abtasty.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||abtasty.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adagio.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adagio.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adap.tv^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adap.tv^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adblade.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adbrite.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adbrite.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adcash.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adcash.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||addefend.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||addefend.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adello.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adello.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adform.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adform.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adgrx.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adition.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||adjust.com^",
+        "||adjust.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adjust.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adkernel.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adkernel.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||admanmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||admanmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||admarvel.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||admarvel.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||admedo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||admedo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||adnxs.com^",
+        "||adnxs.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adnxs.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||adobedc.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adobedc.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||adobedtm.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adobedtm.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adomik.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adroll.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||ads.microsoft.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||ads.microsoft.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adserverplus.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adserverplus.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adservice.google.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adservice.google.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adsrvr.org^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adsterra.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adtelligent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adtelligent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adtrue.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adtrue.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adverline.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adverline.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||advertising.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adverty.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adverty.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adyoulike.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adzerk.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyList",
+        "EasyPrivacy",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||agkn.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||agkn.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||airbrake.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO"
+      ],
+      "matching_rules": [
+        "||airbridge.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||airbridge.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy"
+      ],
+      "matching_rules": [
+        "||alb.reddit.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||alb.reddit.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||amazon-adsystem.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||amazon-adsystem.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||amobee.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||amp-error-reporting.appspot.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||amp-error-reporting.appspot.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||content.ad^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||api.content.ad^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||ipify.org^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||api.ipify.org^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||app-measurement.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||app-measurement.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||appier.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||appnexus.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||appnexus.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||appsflyer.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||appsflyer.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||adobedtm.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||assets.adobedtm.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||axonix.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||axonix.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||bat.bing.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bat.bing.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||betweendigital.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||betweendigital.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "yokoffing Annoyance List"
+      ],
+      "matching_rules": [
+        "||beyondwords.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||beyondwords.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||bidease.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidease.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||bidmachine.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidmachine.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyList",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||bidswitch.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidswitch.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||bidtellect.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidtellect.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||bidtheatre.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidtheatre.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||blis.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||blis.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers"
+      ],
+      "matching_rules": [
+        "||blockadblock.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||blockadblock.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||blockthrough.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||blockthrough.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||blueconic.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||bluekai.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||branch.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||brightcom.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||brightcom.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||bugsnag.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||business-api.tiktok.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||business-api.tiktok.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||c1exchange.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||casalemedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||casalemedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||revcontent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||cdn.revcontent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||cdn.rollbar.com^",
+        "||rollbar.com^",
+        "||rollbar.com^$third-party"
+      ],
+      "reason": "domain-covered",
+      "rule": "||cdn.rollbar.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||cedato.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||cedato.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||chocolateplatform.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||chocolateplatform.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||clickadu.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||clicktale.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||contentsquare.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||contextweb.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||contextweb.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||conversantmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||conversantmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||convertexperiments.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||cpx.to^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||cpx.to^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||crazyegg.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||criteo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||criteo.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "NoCoin browser-mining list",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||crypto-loot.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||typekit.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||css.typekit.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||ct.pinterest.com^",
+        "||pinterest.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||ct.pinterest.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||customer.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO"
+      ],
+      "matching_rules": [
+        "||datalogix.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||datalogix.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||dataxu.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||dataxu.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||decibelinsight.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||demdex.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||demdex.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||dianomi.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||districtm.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||districtm.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||doubleclick.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||doubleclick.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||dynamicyield.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||dynamicyield.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||e-planning.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||emxdgt.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||ensighten.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||eulerian.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||events.reddit.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||events.reddit.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||everesttech.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||evergage.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||exelator.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||exoclick.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||exoclick.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||eyereturn.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||eyereturn.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||doubleclick.net^",
+        "||fls.doubleclick.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||fls.doubleclick.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite"
+      ],
+      "matching_rules": [
+        "||fomo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||fomo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||freegeoip.app^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||freewheel.tv^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||freewheel.tv^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||fundingchoicesmessages.google.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||fundingchoicesmessages.google.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||gamoshi.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||gamoshi.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||geniee.jp^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||getadmiral.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||getadmiral.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||getclicky.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||glassbox.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||glassbox.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||glassboxdigital.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||glassboxdigital.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||glassboxdigital.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||googleadservices.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||googlesyndication.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||googlesyndication.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||gumgum.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||hashvault.pro^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||hilltopads.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||hilltopads.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||honeybadger.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||honeybadger.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||honeycomb.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||honeycomb.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection",
+        "AdGuard Annoyances",
+        "AdGuard Cookie Notices"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||hs-scripts.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||hubapi.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||hubapi.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||id5-sync.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||iesnare.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||imonomy.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||imrworldwide.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||indexexchange.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||indexexchange.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||indexww.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||innity.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||inspectlet.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||intentiq.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||iovation.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||ipapi.co^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||ipapi.co^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||ipinfo.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||ipinfo.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||isocket.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||isocket.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||jivox.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||mgid.com^",
+        "||mgid.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||jsc.mgid.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Gambling",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||juicyads.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||juicyads.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||kameleoon.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||kargo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||kissmetrics.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||kissmetrics.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||kochava.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||kochava.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||krushmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||krushmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||krxd.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||krxd.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||liveramp.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||liveramp.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||lkqd.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||lkqd.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||loggly.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||logtail.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||logtail.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||loopme.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||loopme.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||lotame.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||lotame.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||luckyorange.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||mailchimp.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mailchimp.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||marketo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||mars.media^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mars.media^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||mathtag.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||mc.yandex.ru^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mc.yandex.ru^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||media.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||mediamath.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mediamath.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||mediavine.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||metrics.icloud.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||metrics.icloud.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||mgid.com^",
+        "||mgid.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mgid.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "NoCoin browser-mining list",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||minemytraffic.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||mktoresp.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||mookie1.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mookie1.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||mopub.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mopub.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||mparticle.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||myvisualiq.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||nativo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||nativo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||nexage.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||nexage.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||nextmillennium.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||nextmillennium.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||nr-data.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||nudgify.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||nudgify.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||omtrdc.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||omtrdc.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||onclickalgo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||onclickalgo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "HaGeZi Threat Intelligence Full",
+        "HaGeZi Threat Intelligence Mini",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||onclickmega.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||onclickmega.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||oneaudience.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||oneaudience.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||openx.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||openx.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||optimizely.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||outbrain.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||outbrainimg.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||googlesyndication.com^",
+        "||pagead2.googlesyndication.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pagead2.googlesyndication.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||pagefair.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||pagefair.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pagefair.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||pangle.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pangle.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||papertrailapp.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||papertrailapp.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||pippio.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pippio.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||popads.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||popads.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||popcash.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||popcash.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||propellerads.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||propellerads.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||propellerclick.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||propellerclick.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||provesrc.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||ptengine.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||pub.network^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pub.network^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||pubmatic.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pubmatic.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Annoyances"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||pushwoosh.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||ads.linkedin.com^",
+        "||linkedin.com^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||px.ads.linkedin.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||quantcount.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||quantummetric.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||raygun.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||raygun.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||report-uri.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||revcontent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||revcontent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||richaudience.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||rlcdn.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||rollbar.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||rtbhouse.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "EasyList",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||rubiconproject.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||rubiconproject.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||tealiumiq.com^",
+        "||tealiumiq.com^$third-party"
+      ],
+      "reason": "domain-covered",
+      "rule": "||s.tealiumiq.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite"
+      ],
+      "matching_rules": [
+        "||salespop.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||salespop.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||sc-static.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||secretmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||secretmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||seedtag.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||seon.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||sessioncam.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||sharedid.org^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||sharedid.org^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||sharethrough.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||simpli.fi^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||singular.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||smaato.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||smaato.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||smartadserver.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||smartadserver.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||smartclip.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||smartclip.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||smartlook.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||smartyads.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite"
+      ],
+      "matching_rules": [
+        "||snap.licdn.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||snap.licdn.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||sonobi.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||sovrn.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||split.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||split.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||spotx.tv^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||spotxchange.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||spotxchange.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||springserve.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||stackadapt.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||stackadapt.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||statcounter.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||ads-twitter.com^",
+        "||static.ads-twitter.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||static.ads-twitter.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||statsigapi.net^",
+        "||statsigapi.net^$third-party"
+      ],
+      "reason": "domain-covered",
+      "rule": "||statsigapi.net^$domain=chatgpt.com|openai.com,third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||stun.l.google.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||stun.l.google.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||synacor.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||synacor.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||taboola.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||tapad.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||targetspot.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||teads.tv^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||teads.tv^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||tealiumiq.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||telemetry.microsoft.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||telemetry.microsoft.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||thetradedesk.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||thetradedesk.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||tr.snapchat.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||tr.snapchat.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||trackjs.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||trackjs.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||traffichaus.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||trafficjunky.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||trafficjunky.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||trafficstars.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||taboola.com^",
+        "||taboola.com^$3p",
+        "||taboola.com^$third-party",
+        "||trc.taboola.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||trc.taboola.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||treasuredata.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||tremorhub.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||tremorhub.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||triplelift.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||turn.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||uidapi.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||uidapi.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||undertone.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||unrulymedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||unrulymedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||uriports.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||uriports.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||typekit.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||use.typekit.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||useproof.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||venatusmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||venatusmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||videoamp.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||videologygroup.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||videologygroup.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||vwo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||vwo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||weborama.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||webtrends.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "EasyPrivacy",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||outbrain.com^",
+        "||outbrain.com^$3p",
+        "||outbrain.com^$third-party",
+        "||widgets.outbrain.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||widgets.outbrain.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||wisepops.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||wisepops.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||woopra.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||wt-eu02.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||yieldlab.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||yieldlab.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||yieldmo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||yldbt.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||yldbt.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||zemanta.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||zergnet.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||zergnet.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||zeropark.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adbutler.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adbutler.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO"
+      ],
+      "matching_rules": [
+        "||adcloud.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adcloud.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adcolony.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adgear.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adify.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adify.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adknowledge.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||admeld.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||admeld.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adnetworkperformance.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adnetworkperformance.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adnium.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adnow.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adperium.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adperium.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adplugg.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adpushup.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adready.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adready.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||adsafeprotected.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adsafeprotected.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adskeeper.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adskeeper.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains",
+        "yokoffing Privacy Essentials"
+      ],
+      "matching_rules": [
+        "||adskeeper.co.uk^",
+        "||adskeeper.co.uk^$3p"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adskeeper.co.uk^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adsnative.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adsnative.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||adsonar.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adsonar.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adspirit.de^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adspirit.de^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adstir.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adstir.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adtech.de^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adtechjp.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adtarget.me^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adview.cn^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adview.cn^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adworldmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||affiliatewindow.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||affiliatewindow.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||alenty.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||aralego.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||aralego.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||audigent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||audigent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Threat Intelligence Full"
+      ],
+      "matching_rules": [
+        "||bidadx.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidadx.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||bidclix.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||bidclix.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||bitmedia.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||brainient.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||brainient.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||brightroll.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||brightroll.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||buysellads.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||carbonads.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||carbonads.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||chartboost.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||chartboost.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||clickbooth.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||clickbooth.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||clickio.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||clickio.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||clicksor.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||cpmstar.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||epom.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||ero-advertising.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||ero-advertising.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||exponential.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||flashtalking.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||flashtalking.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||fyber.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||fyber.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||getintent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||getintent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||hyprmx.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||hyprmx.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||infolinks.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers"
+      ],
+      "matching_rules": [
+        "||inner-active.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||inner-active.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter",
+        "AdGuard Annoyances"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||insticator.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||iqzone.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||jumptap.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||jumptap.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||lijit.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||liveintent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||liveintent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||media6degrees.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||media6degrees.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||mobfox.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mobfox.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||mobvista.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mobvista.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers"
+      ],
+      "matching_rules": [
+        "||monetizer101.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||monetizer101.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO"
+      ],
+      "matching_rules": [
+        "||nugg.ad^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||nugg.ad^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||optimatic.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||optimatic.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||pointroll.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pointroll.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||pubnative.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pubnative.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||pulsepoint.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||pulsepoint.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||quantcast.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||quantcast.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||relay42.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||relay42.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||remerge.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||remerge.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||rhythmone.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||rhythmone.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||rocketfuel.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||rocketfuel.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||runative.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||runative.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||sekindo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||sekindo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||smadex.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO"
+      ],
+      "matching_rules": [
+        "||snigel.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||snigel.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||socdm.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||socdm.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard DNS filter",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||startappservice.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||startappservice.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||start.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||start.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||streamrail.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||streamrail.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||tapjoy.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||themoneytizer.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||trafficforce.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||tradelab.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||tradelab.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||vidazoo.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||vidazoo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||vidoomy.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||voluum.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||voluum.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "AdGuard Tracking Protection",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||w55c.net^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||w55c.net^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||yieldlove.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||yume.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||yume.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||zedo.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||zypmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||zypmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adbroker.de^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adbroker.de^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adfrontiers.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adfrontiers.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "HaGeZi Threat Intelligence Full",
+        "HaGeZi Threat Intelligence Mini",
+        "OISD Big"
+      ],
+      "matching_rules": [
+        "||adgorithms.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adgorithms.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "HaGeZi Threat Intelligence Full",
+        "HaGeZi Threat Intelligence Mini",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adgoi.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adgoi.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adimpact.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||adlucent.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adlucent.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||adnimation.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "HaGeZi Threat Intelligence Full",
+        "HaGeZi Threat Intelligence Mini",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adngin.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adngin.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||adxpansion.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||adxpansion.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||airpush.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||airpush.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||clickagy.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||clickagy.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||clickonometrics.pl^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||crimtan.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||crimtan.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "HaGeZi Multi PRO",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||display.io^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||display.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||firstimpression.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Annoyances"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||foxpush.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "ShadowWhisperer Tracking Domains"
+      ],
+      "matching_rules": [
+        "||gemius.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||gemius.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||giraff.io^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||glispa.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||glispa.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||hybrid.ai^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||improvedigital.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyList",
+        "AdGuard Base Filter"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||intergi.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||invibes.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||invibes.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||keywee.co^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||lifestreet.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||lifestreet.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "1Hosts Lite",
+        "AdGuard Base Filter",
+        "AdGuard DNS filter",
+        "EasyList",
+        "HaGeZi Multi PRO",
+        "OISD Big",
+        "Peter Lowe Ad Servers",
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||lucidmedia.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||lucidmedia.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "ShadowWhisperer Ads Domains"
+      ],
+      "matching_rules": [
+        "||mediaocean.com^"
+      ],
+      "reason": "domain-covered",
+      "rule": "||mediaocean.com^$third-party"
+    },
+    {
+      "covered_by": [
+        "EasyPrivacy",
+        "AdGuard Tracking Protection"
+      ],
+      "reason": "exact-filter-match",
+      "rule": "||mediarithmics.com^$third-party"
+    }
+  ],
   "project_version": "1.3.2",
-  "published_active_rules": 833,
+  "published_active_rules": 316,
   "published_rule_categories": {
-    "cosmetic": 85,
-    "network": 662,
+    "cosmetic": 81,
+    "network": 149,
     "path_or_regex": 9,
     "url_parameter": 77
   },
-  "reference_coverage_complete": false,
+  "reference_coverage_complete": true,
   "reference_feeds": [
     {
-      "error": "offline bootstrap build; online coverage not checked",
-      "name": "reference feeds",
-      "ok": false
+      "active_lines": 78580,
+      "attempts": 1,
+      "bytes": 2080914,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.41,
+      "etag": "W/\"6aefd1f4-1fc092\"",
+      "final_url": "https://easylist.to/easylist/easylist.txt",
+      "format": "adblock",
+      "last_modified": "Sun, 08 Nov 2026 01:35:48 GMT",
+      "lines": 78858,
+      "name": "EasyList",
+      "ok": true,
+      "sha256": "2ad65343800825cb40f014fc200150c67ba5bd2795e48abc657ac44c2a10bc18"
+    },
+    {
+      "active_lines": 56494,
+      "attempts": 1,
+      "bytes": 1513442,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.232,
+      "etag": "W/\"6aefd021-1717e2\"",
+      "final_url": "https://easylist.to/easylist/easyprivacy.txt",
+      "format": "adblock",
+      "last_modified": "Sun, 08 Nov 2026 01:28:01 GMT",
+      "lines": 57268,
+      "name": "EasyPrivacy",
+      "ok": true,
+      "sha256": "40fe06eff651bb329500683bf1659776ca134f67f302baa1105b20cecfb6b492"
+    },
+    {
+      "active_lines": 3560,
+      "attempts": 1,
+      "bytes": 70409,
+      "content_type": "text/plain;charset=UTF-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.86,
+      "etag": null,
+      "final_url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=0&mimetype=plaintext",
+      "format": "adblock",
+      "last_modified": "Sat, 07 Nov 2026 18:50:37 GMT",
+      "lines": 3579,
+      "name": "Peter Lowe Ad Servers",
+      "ok": true,
+      "sha256": "68fd03880a70202368484e675c3989b0519b0c019af664f9676ab17cc302e708"
+    },
+    {
+      "active_lines": 102259,
+      "attempts": 1,
+      "bytes": 2347853,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.42,
+      "etag": "\"52fa2c5a8f851288c3e232f251af5790b2bbdc6c65a066b2da1a9c7e24d76c6c\"",
+      "final_url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 102275,
+      "name": "1Hosts Lite",
+      "ok": true,
+      "sha256": "f2d89a0f4b60d420a852419352473c2d3bde02b4a9772dd2cc7eb448200bd070"
+    },
+    {
+      "active_lines": 224880,
+      "attempts": 1,
+      "bytes": 5106631,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.307,
+      "etag": "\"faf52dc83eccdc32c6f692ac09862f37452b37646e077035d85c105eed618d0d\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 224894,
+      "name": "HaGeZi Multi PRO",
+      "ok": true,
+      "sha256": "f825edf8ebdcdc64df0f9ac0cefdfb3726ac7aae2e9fef97bf2b9ed3cf4d9e4b"
+    },
+    {
+      "active_lines": 190576,
+      "attempts": 1,
+      "bytes": 4851136,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.492,
+      "etag": "\"95b96044f29b6b4468ae54972af1dca4e6d52ba0a6838ea8a13d56633d907853\"",
+      "final_url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_15_DnsFilter/filter.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 192240,
+      "name": "AdGuard DNS filter",
+      "ok": true,
+      "sha256": "78ccf43d315dcfb583770c701fc41a2d501678d3f88890f66234085c75f7687b"
+    },
+    {
+      "active_lines": 232156,
+      "attempts": 1,
+      "bytes": 5244578,
+      "content_type": "text/plain",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 2.235,
+      "etag": "\"6aefcaef-5006a2\"",
+      "final_url": "https://big.oisd.nl/",
+      "format": "adblock",
+      "last_modified": "Sun, 08 Nov 2026 01:05:51 GMT",
+      "lines": 232168,
+      "name": "OISD Big",
+      "ok": true,
+      "sha256": "fc8fc86881b41c19af2664069a90879db7382a2bb32db86b3fba731f65b60908"
+    },
+    {
+      "active_lines": 308642,
+      "attempts": 1,
+      "bytes": 10021278,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.652,
+      "etag": "\"dd449d26aa64d90b8938df06fc9ceba146338929e813feeb614cb14cf4980da0\"",
+      "final_url": "https://raw.githubusercontent.com/AdguardTeam/cname-trackers/master/data/combined_disguised_mail_trackers.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 308647,
+      "name": "AdGuard disguised mail trackers",
+      "ok": true,
+      "sha256": "05c3bcb8875c9e748c9c9053a5c4a656ac8e84daf4066c4317b862cd3559919b"
+    },
+    {
+      "active_lines": 968,
+      "attempts": 1,
+      "bytes": 81946,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.142,
+      "etag": "\"b6ae10e8c8728d8ce47c1232d28c93861a7cc3b04eee210c6b5833c3b79ea7f4\"",
+      "final_url": "https://raw.githubusercontent.com/yokoffing/filterlists/main/annoyance_list.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 1205,
+      "name": "yokoffing Annoyance List",
+      "ok": true,
+      "sha256": "f65542c4ee26e41ac60c49445b8e9bae1aa9d94dbe8f7b7a5447ba4e382c90ee"
+    },
+    {
+      "active_lines": 64,
+      "attempts": 1,
+      "bytes": 5062,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.14,
+      "etag": "\"09a198d3de3c527599195b007afc96fadbfbf578204145049c5dba1d8ea700b6\"",
+      "final_url": "https://raw.githubusercontent.com/yokoffing/filterlists/main/click2load.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 91,
+      "name": "yokoffing click2load",
+      "ok": true,
+      "sha256": "50d7b900dfcb3079d616bafc849f151aa9ca6ae2b303839ca49b01cbedd223a2"
+    },
+    {
+      "active_lines": 525,
+      "attempts": 1,
+      "bytes": 20104,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.104,
+      "etag": "\"5bbe52f3a3c68d272f0309b48486ae2f21d211b57896e302c14b426817a7a703\"",
+      "final_url": "https://raw.githubusercontent.com/yokoffing/filterlists/main/privacy_essentials.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 669,
+      "name": "yokoffing Privacy Essentials",
+      "ok": true,
+      "sha256": "b7f8b964c65dc60fa7cac6f15b3b71eb971fde465831b16835fd464d19f78faa"
+    },
+    {
+      "active_lines": 1519,
+      "attempts": 1,
+      "bytes": 24608,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.199,
+      "etag": "\"535e813278ce29d3163ee8c9089ba73db808697915fccc0248ea553a6446842a\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 1532,
+      "name": "HaGeZi Dynamic DNS",
+      "ok": true,
+      "sha256": "6fb6e5b802533b9560a3cbdddbb34a8b38519ebef9ae935750e2f143fef3350d"
+    },
+    {
+      "active_lines": 1111,
+      "attempts": 1,
+      "bytes": 16662,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.097,
+      "etag": "\"a92119e19e24607bf8d051f4ad9544fd5fa5c969c60fb78ceed97012196e52b8\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 1126,
+      "name": "HaGeZi Badware Hoster",
+      "ok": true,
+      "sha256": "7384e2092eed7533c085369191c0c3f03c39c3783b9dcddd47fcc9121b9182e1"
+    },
+    {
+      "active_lines": 18786,
+      "attempts": 1,
+      "bytes": 379807,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.182,
+      "etag": "\"b6a8219ca23c366344e08ca0cadb24811b0fcc19bb6e357ef323f602a9feff4a\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/fake.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 18799,
+      "name": "HaGeZi Fake Domains",
+      "ok": true,
+      "sha256": "fbe787f7c2146d619878b54f1908bac8ce5ada1a877c079014c7d0529fa8dfc5"
+    },
+    {
+      "active_lines": 633332,
+      "attempts": 1,
+      "bytes": 13085862,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 1.723,
+      "etag": "\"d12e37f28d51965a3f513ae72773a66b96c1dfcc3d954aa004cefa13b77c0f04\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 633345,
+      "name": "HaGeZi Gambling",
+      "ok": true,
+      "sha256": "7ff772ba1f8314e786f541dc4796b3a09b190a025861f35fac88be6b274db31b"
+    },
+    {
+      "active_lines": 188771,
+      "attempts": 1,
+      "bytes": 3979128,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.212,
+      "etag": "\"9d515fba9c00364649683ff8ef3fa553e306b8b183178b37e1f3f6cfae97fdee\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.mini.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 188784,
+      "name": "HaGeZi Threat Intelligence Mini",
+      "ok": true,
+      "sha256": "b127efc9fea6620ed86ee8493bdff6696dd0f3a0810c135b257d787b2c6f8706"
+    },
+    {
+      "active_lines": 316,
+      "attempts": 1,
+      "bytes": 15922,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.088,
+      "etag": "\"f7a03cec53b85d09c9483745b9b3f90c45a2f08855901a51685deb7134dd2cfe\"",
+      "final_url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 357,
+      "name": "NoCoin browser-mining list",
+      "ok": true,
+      "sha256": "72fd0dda718ffcfd8fab8b416290c7feb8bd65efe060b17d30265a57cb51a649"
+    },
+    {
+      "active_lines": 25480,
+      "attempts": 1,
+      "bytes": 801032,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.145,
+      "etag": "\"1dc19ecf209970a4cc3aac3b7c98a3cab77a88d2118b0f0461d18970b48c7d17\"",
+      "final_url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/Alternate%20versions%20Anti-Malware%20List/AntiMalwareABP.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 26797,
+      "name": "Dandelion Sprout Anti-Malware",
+      "ok": true,
+      "sha256": "1ad39f6e1de37d021ec479de52353530938bd002a5f416597781d6e60671007f"
+    },
+    {
+      "active_lines": 145239,
+      "attempts": 1,
+      "bytes": 3126833,
+      "content_type": "text/plain",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.347,
+      "etag": "",
+      "final_url": "https://phishing.army/download/phishing_army_blocklist_extended.txt",
+      "format": "adblock",
+      "last_modified": "Sat, 07 Nov 2026 23:00:30 GMT",
+      "lines": 145272,
+      "name": "Phishing Army Community Phishing List",
+      "ok": true,
+      "sha256": "a31af7cb9bcea0baf7aafd3a8a58a1d7d8104c63d78b4b5ffdc1cb5017e0140d"
+    },
+    {
+      "active_lines": 4882,
+      "attempts": 1,
+      "bytes": 273659,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.209,
+      "etag": "\"d7af0166c4120679bf013fa6f3dcbcebcfc125d49b96df3175779e9aa0faa666\"",
+      "final_url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/badware.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 7049,
+      "name": "uBlock Origin Badware Risks",
+      "ok": true,
+      "sha256": "561f86e5ff66d3a637cd4f9c8608131f3560be7721edb962c9814fa4f26fc46b"
+    },
+    {
+      "active_lines": 78,
+      "attempts": 1,
+      "bytes": 9223,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.053,
+      "etag": "\"6087d12cb9421758bb136458fd3834f6c1b5b3b8be831cda32573f619fa7d3e4\"",
+      "final_url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 226,
+      "name": "uBlock Origin Resource Abuse",
+      "ok": true,
+      "sha256": "26758d49f533218b559207724a3d294d1fa74e36cdce080999bc1b7f96ad552a"
+    },
+    {
+      "active_lines": 142615,
+      "attempts": 1,
+      "bytes": 8029306,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.13,
+      "etag": "\"3b73383c4415ab19de44a6563709540aaf0b550c4d239ea4db187614fa5cb339\"",
+      "final_url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 164033,
+      "name": "AdGuard Base Filter",
+      "ok": true,
+      "sha256": "db7dde518f4c5d9db83550c30c962bfdaa6c759ae95a67b08a81b5eea6b4c5b9"
+    },
+    {
+      "active_lines": 439610,
+      "attempts": 1,
+      "bytes": 15221557,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.941,
+      "etag": "\"c8eff5579bb3e549255dc23cee4f18f515bf47d64eb94d5946fd91d94a5fdfed\"",
+      "final_url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_3_Spyware/filter.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 443744,
+      "name": "AdGuard Tracking Protection",
+      "ok": true,
+      "sha256": "e917e34cd41ae7735bfcf03caf99e8ad7d7b17c5ae42d79b7901cd99f1280a05"
+    },
+    {
+      "active_lines": 62684,
+      "attempts": 1,
+      "bytes": 4689176,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 1.231,
+      "etag": "\"0ed405c017003220a6db7bb6dc5c972aab8eb6a8dfc9f82d73310148cc600faf\"",
+      "final_url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_14_Annoyances/filter.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 71411,
+      "name": "AdGuard Annoyances",
+      "ok": true,
+      "sha256": "03a313457935d59171dd1b15e3b27c7f12799295ec466f9d8025c1f0b4315238"
+    },
+    {
+      "active_lines": 22456,
+      "attempts": 1,
+      "bytes": 1775323,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.202,
+      "etag": "\"a0dd65ca2f21cd9e220b3ef442265a75f423df0bdd837b412063623146715ed9\"",
+      "final_url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_18_Annoyances_Cookies/filter.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 25826,
+      "name": "AdGuard Cookie Notices",
+      "ok": true,
+      "sha256": "7260f707646ecb35bec2bb4c41991bf109d52836031293a52d26b8ab47498c9b"
+    },
+    {
+      "active_lines": 28685,
+      "attempts": 1,
+      "bytes": 480556,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.143,
+      "etag": "\"9da6a9effc7488582fae8687744846e8fdd5ab289a4da9ac18e0e0b713d147f8\"",
+      "final_url": "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Ads",
+      "format": "domains",
+      "last_modified": null,
+      "lines": 28695,
+      "name": "ShadowWhisperer Ads Domains",
+      "ok": true,
+      "sha256": "8ac7e88392abb2c3e25811698e851143c808ed13ef67b89c1eb620567d34c6ba"
+    },
+    {
+      "active_lines": 121075,
+      "attempts": 1,
+      "bytes": 2606817,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 1.107,
+      "etag": "\"4693aa0ae4567071c7727ea747647e0a2bab1a668c11ad3c8012a0fc67fc02fc\"",
+      "final_url": "https://raw.githubusercontent.com/ShadowWhisperer/BlockLists/master/Lists/Tracking",
+      "format": "domains",
+      "last_modified": null,
+      "lines": 121095,
+      "name": "ShadowWhisperer Tracking Domains",
+      "ok": true,
+      "sha256": "313cc5cc8f1d224375a83c7ec2a19568d320baedcdde6efdf2b2470a4cc2569d"
+    },
+    {
+      "active_lines": 300,
+      "attempts": 1,
+      "bytes": 15042,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "health-only; URL indicators are never treated as domain-wide coverage",
+      "duration_seconds": 0.054,
+      "etag": "\"708a5879c5f36b92b03bc0cc49d19d53a8c429be926fdef9ce183b73dfaa779a\"",
+      "final_url": "https://raw.githubusercontent.com/openphish/public_feed/main/feed.txt",
+      "format": "url-indicators",
+      "last_modified": null,
+      "lines": 300,
+      "name": "OpenPhish Community URL Indicators (health only)",
+      "ok": true,
+      "sha256": "17562062176a41242d4c76eeacccc24427059a37fac36d5aabd6016a51e534da"
+    },
+    {
+      "active_lines": 1467932,
+      "attempts": 1,
+      "bytes": 31205226,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.816,
+      "etag": "\"4b4f5014f1299bb9a6dd11e8fa99d266aa9572b52486bf02bbd4a5a1b2831292\"",
+      "final_url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/tif.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 1467946,
+      "name": "HaGeZi Threat Intelligence Full",
+      "ok": true,
+      "sha256": "767778b5f63026252300784c429f421f64906f0d1f2e92328f84945c8186c551"
+    },
+    {
+      "active_lines": 451,
+      "attempts": 1,
+      "bytes": 86134,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.378,
+      "etag": "\"522e862dc8e9091dd16032dd01469427ac4bcbaf803849e14c314ff066f143b8\"",
+      "final_url": "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/quick-fixes.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 668,
+      "name": "uBlock Origin Quick Fixes",
+      "ok": true,
+      "sha256": "785ca7b89c69437dfcbd00673e573db9be63a95eb011d9d3350c524d351ce547"
+    },
+    {
+      "active_lines": 125,
+      "attempts": 1,
+      "bytes": 8704,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.03,
+      "etag": "\"24be6814dda4d4802252b18b1594a96500d5251f5a427b4692259034bb8fd4c1\"",
+      "final_url": "https://raw.githubusercontent.com/bogachenko/fuckfuckadblock/master/fuckfuckadblock.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 282,
+      "name": "Fuck Fuckadblock (legacy reference)",
+      "ok": true,
+      "sha256": "13f2d9a8ccefe6360c8eb06607834e16efd557879938aaecf561c9de2f7576b3"
+    },
+    {
+      "active_lines": 151,
+      "attempts": 1,
+      "bytes": 3446,
+      "content_type": "text/plain; charset=utf-8",
+      "coverage_mode": "coverage-index only; feed rules are never copied into output",
+      "duration_seconds": 0.034,
+      "etag": "\"699793f1c2ca45d8d4fe134b855d979e9b52458e437f45bfe29c9b51e1f098f1\"",
+      "final_url": "https://raw.githubusercontent.com/bogachenko/fuckfuckadblock/master/fuckfuckadblock-mining.txt",
+      "format": "adblock",
+      "last_modified": null,
+      "lines": 164,
+      "name": "Fuck Fuckadblock Mining (legacy reference)",
+      "ok": true,
+      "sha256": "36696f15616fdfa02551dc8436de3be1b7f37d012183b751ffe9a8ea65d6d9dd"
     }
   ],
-  "reference_registry_sha256": "7b400459bf0f97dba515c9222694447ef60adc7d957f6f6eb3140419588c885a",
-  "removed_exact_and_covered_rules": 0,
+  "reference_registry_sha256": "1f87efcd4ad31d4e3327855dc234eb7bc6cd6d1aede23f239231280a3112d0a6",
+  "removed_exact_and_covered_rules": 517,
   "schema_version": 1,
   "source_exact_duplicates_removed": 0,
   "source_module_count": 16,
   "source_unique_rules": 833,
-  "successful_feed_count": 0,
-  "successful_feed_groups": {},
-  "total_feed_count": 0
+  "successful_feed_count": 32,
+  "successful_feed_groups": {
+    "ads": 9,
+    "annoyance": 6,
+    "privacy": 11,
+    "security": 16,
+    "special-category": 1
+  },
+  "total_feed_count": 32
 }

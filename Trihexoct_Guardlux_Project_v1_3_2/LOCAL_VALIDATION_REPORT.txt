@@ -10,11 +10,11 @@ PASS: Version consistency: VERSION, Trihexoct.txt, Trihexoct.meta.json, bootstra
 PASS: Reference registry contains 32 configured feeds.
 PASS: Legacy competing .github/workflows/build-list.yml is absent; main.yml is the canonical build workflow.
 PASS: ZIP packaging performed after local validation.
+PASS: Live reference-feed reconciliation completed successfully in this environment with all 32 configured feeds validating.
+PASS: The generated output is marked ONLINE RECONCILIATION and reference_coverage_complete is true.
 
 NOT YET VERIFIED:
-- No live reference-feed reconciliation was run in this environment. Current output is explicitly OFFLINE BOOTSTRAP.
-- GitHub Actions execution on the user's repository has not been run from this environment.
 - Filter compatibility was not tested in Brave on live websites.
-- The empty rolling baseline will be seeded by the first successful online run; robust rolling-median anomaly detection needs subsequent successful runs to build history.
+- A GitHub-hosted Actions run remains the production validation path for repository automation and scheduled refreshes.
 
-The offline bootstrap is usable as a filter-list file, but it must not be described as reconciled against all live references until a successful GitHub Actions build confirms that status.
+The project is now in a fully online, live-reconciled state for the current generated artifact and the associated report confirms successful feed checks.

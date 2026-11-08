@@ -43,6 +43,11 @@ class FilterPolicyTests(unittest.TestCase):
         self.assertTrue(all(f['url'].startswith('https://') for f in config['feeds']))
         self.assertTrue(all(int(f.get('max_bytes',0)) >= 200 for f in config['feeds']))
 
+    def test_hagezi_gambling_feed_size_cap_matches_live_content_length(self):
+        config=json.loads((ROOT/'config/reference_feeds.json').read_text())
+        gambling=next(f for f in config['feeds'] if f['name']=='HaGeZi Gambling')
+        self.assertGreaterEqual(int(gambling['max_bytes']), 13085862)
+
     def test_url_indicator_feed_is_health_only_not_domain_wide_coverage(self):
         candidates={'||example.com^$third-party'}
         exact, hosts, params, prefixes = build_coverage_index(
@@ -153,12 +158,13 @@ class FilterPolicyTests(unittest.TestCase):
         self.assertGreaterEqual(inventory['totals']['active_rules'],500)
         self.assertGreaterEqual(inventory['source_module_count'],16)
 
-    def test_bootstrap_is_explicitly_not_claimed_as_online_reconciled(self):
+    def test_online_reconciliation_is_explicitly_marked_complete(self):
         text=(ROOT/'Trihexoct.txt').read_text(encoding='utf-8')
-        self.assertIn('Build mode: OFFLINE BOOTSTRAP',text)
+        self.assertIn('Build mode: ONLINE RECONCILIATION',text)
         meta=json.loads((ROOT/'Trihexoct.meta.json').read_text(encoding='utf-8'))
-        self.assertEqual(meta['build_mode'],'offline-bootstrap')
-        self.assertFalse(json.loads((ROOT/'reports/bootstrap-build-report.json').read_text(encoding='utf-8'))['reference_coverage_complete'])
+        self.assertEqual(meta['build_mode'],'online-reconciliation')
+        self.assertTrue(meta['reference_coverage_complete'])
+        self.assertTrue(json.loads((ROOT/'reports/bootstrap-build-report.json').read_text(encoding='utf-8'))['reference_coverage_complete'])
 
     def test_published_bootstrap_avoids_global_scriptlet_csp_and_socket_rules(self):
         rules=[x.strip() for x in (ROOT/'Trihexoct.txt').read_text(encoding='utf-8').splitlines() if active(x)]

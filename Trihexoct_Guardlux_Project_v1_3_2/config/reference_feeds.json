@@ -160,7 +160,7 @@
       "name": "HaGeZi Gambling",
       "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/gambling.txt",
       "required": false,
-      "max_bytes": 8000000,
+      "max_bytes": 20000000,
       "format": "adblock",
       "groups": [
         "special-category"
