@@ -1,0 +1,20 @@
+TRIHEXOCT GUARDLUX v1.3.2 — LOCAL VALIDATION REPORT
+Generated: 2026-10-20
+
+PASS: Python regression suite: 49 tests.
+PASS: GitHub Actions YAML/step-structure validator: 2 workflow files parsed.
+PASS: Filter policy and generated-manifest validator: 833 unique active rules, 910 total lines.
+PASS: Source inventory audit: 16 modules, 833 source rules, 0 duplicate rules, 0 policy violations.
+PASS: Python syntax compilation for tools and tests.
+PASS: Version consistency: VERSION, Trihexoct.txt, Trihexoct.meta.json, bootstrap report, and source inventory all use v1.3.2.
+PASS: Reference registry contains 32 configured feeds.
+PASS: Legacy competing .github/workflows/build-list.yml is absent; main.yml is the canonical build workflow.
+PASS: ZIP packaging performed after local validation.
+
+NOT YET VERIFIED:
+- No live reference-feed reconciliation was run in this environment. Current output is explicitly OFFLINE BOOTSTRAP.
+- GitHub Actions execution on the user's repository has not been run from this environment.
+- Filter compatibility was not tested in Brave on live websites.
+- The empty rolling baseline will be seeded by the first successful online run; robust rolling-median anomaly detection needs subsequent successful runs to build history.
+
+The offline bootstrap is usable as a filter-list file, but it must not be described as reconciled against all live references until a successful GitHub Actions build confirms that status.
