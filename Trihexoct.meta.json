@@ -14,7 +14,7 @@
     "url_parameter": 77
   },
   "last_output_delta_gate_passed": true,
-  "last_output_delta_ratio": 0.6206,
+  "last_output_delta_ratio": 0.0,
   "output": "Trihexoct.txt",
   "output_sha256": "677947a90c03b26ceedc2a79c4f782a005be68810aca48b57ce6ee4d1dce450d",
   "overlap_policy_version": "2.1",
