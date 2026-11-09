@@ -22,12 +22,17 @@
           "active_lines": 102259,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "f2d89a0f4b60d420a852419352473c2d3bde02b4a9772dd2cc7eb448200bd070"
+        },
+        {
+          "active_lines": 102259,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "f2d89a0f4b60d420a852419352473c2d3bde02b4a9772dd2cc7eb448200bd070"
         }
       ],
       "sha256": "f2d89a0f4b60d420a852419352473c2d3bde02b4a9772dd2cc7eb448200bd070"
     },
     "AdGuard Annoyances": {
-      "active_lines": 62685,
+      "active_lines": 62696,
       "history": [
         {
           "active_lines": 62684,
@@ -48,12 +53,17 @@
           "active_lines": 62685,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "ba6b80681976110aecfcc27b36b3d3725b05a8fd07b9102871c591dee1c5dc18"
+        },
+        {
+          "active_lines": 62696,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "85eeda44ee1ebbdb05c6156fb029cc394d387de3aa2c9c6d4de1b799fa694636"
         }
       ],
-      "sha256": "ba6b80681976110aecfcc27b36b3d3725b05a8fd07b9102871c591dee1c5dc18"
+      "sha256": "85eeda44ee1ebbdb05c6156fb029cc394d387de3aa2c9c6d4de1b799fa694636"
     },
     "AdGuard Base Filter": {
-      "active_lines": 142868,
+      "active_lines": 139994,
       "history": [
         {
           "active_lines": 142615,
@@ -74,12 +84,17 @@
           "active_lines": 142868,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "1da4ee3464d5407391efeff1a959e1af153c4ff69fa2427da8862b6b0aaeae2b"
+        },
+        {
+          "active_lines": 139994,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "0f7700546225ced8e8825da840847ff345af2536158229f61a426c28bec83116"
         }
       ],
-      "sha256": "1da4ee3464d5407391efeff1a959e1af153c4ff69fa2427da8862b6b0aaeae2b"
+      "sha256": "0f7700546225ced8e8825da840847ff345af2536158229f61a426c28bec83116"
     },
     "AdGuard Cookie Notices": {
-      "active_lines": 22456,
+      "active_lines": 22464,
       "history": [
         {
           "active_lines": 22456,
@@ -100,12 +115,17 @@
           "active_lines": 22456,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "fc4b255f5aeec57099209ee2818c6c926e31e318d656b4ebd11b40e967aea181"
+        },
+        {
+          "active_lines": 22464,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "a8340b26ff7d3ef00a39e7d92860037dc24dc77ac3c8ba5d1432956a23a3fb05"
         }
       ],
-      "sha256": "fc4b255f5aeec57099209ee2818c6c926e31e318d656b4ebd11b40e967aea181"
+      "sha256": "a8340b26ff7d3ef00a39e7d92860037dc24dc77ac3c8ba5d1432956a23a3fb05"
     },
     "AdGuard DNS filter": {
-      "active_lines": 190797,
+      "active_lines": 187982,
       "history": [
         {
           "active_lines": 190576,
@@ -126,12 +146,17 @@
           "active_lines": 190797,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "a463cbf4939b1e12803504e682981990d4d661a01d434689edd353bebc6f6353"
+        },
+        {
+          "active_lines": 187982,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "1bd2d366883bd3e47c5a9162c77b528dd88171d42d372548cce87ef5bf15ff41"
         }
       ],
-      "sha256": "a463cbf4939b1e12803504e682981990d4d661a01d434689edd353bebc6f6353"
+      "sha256": "1bd2d366883bd3e47c5a9162c77b528dd88171d42d372548cce87ef5bf15ff41"
     },
     "AdGuard Tracking Protection": {
-      "active_lines": 439615,
+      "active_lines": 439622,
       "history": [
         {
           "active_lines": 439610,
@@ -152,9 +177,14 @@
           "active_lines": 439615,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "bfa3c1446f0168418c98e850b71b56967df14255750645770d4e6ac04bf64cf9"
+        },
+        {
+          "active_lines": 439622,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "dc94d02b0b584371e16dd659ef82f6a50b0697ecdc047c1fdf73ac72ff0d811a"
         }
       ],
-      "sha256": "bfa3c1446f0168418c98e850b71b56967df14255750645770d4e6ac04bf64cf9"
+      "sha256": "dc94d02b0b584371e16dd659ef82f6a50b0697ecdc047c1fdf73ac72ff0d811a"
     },
     "AdGuard disguised mail trackers": {
       "active_lines": 308642,
@@ -178,12 +208,17 @@
           "active_lines": 308642,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "05c3bcb8875c9e748c9c9053a5c4a656ac8e84daf4066c4317b862cd3559919b"
+        },
+        {
+          "active_lines": 308642,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "05c3bcb8875c9e748c9c9053a5c4a656ac8e84daf4066c4317b862cd3559919b"
         }
       ],
       "sha256": "05c3bcb8875c9e748c9c9053a5c4a656ac8e84daf4066c4317b862cd3559919b"
     },
     "Dandelion Sprout Anti-Malware": {
-      "active_lines": 25486,
+      "active_lines": 25300,
       "history": [
         {
           "active_lines": 25480,
@@ -204,12 +239,17 @@
           "active_lines": 25486,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "8b2aaabb4bf36f833a46499e96d7e86f36e62bba5a4f2e8f7dc410f037b8883f"
+        },
+        {
+          "active_lines": 25300,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "ed7ec9941a2b47de9af6b076bd69db60e7edd60c5776da4ae1cf3ade09959b5a"
         }
       ],
-      "sha256": "8b2aaabb4bf36f833a46499e96d7e86f36e62bba5a4f2e8f7dc410f037b8883f"
+      "sha256": "ed7ec9941a2b47de9af6b076bd69db60e7edd60c5776da4ae1cf3ade09959b5a"
     },
     "EasyList": {
-      "active_lines": 78834,
+      "active_lines": 75966,
       "history": [
         {
           "active_lines": 78580,
@@ -230,12 +270,17 @@
           "active_lines": 78834,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "b4797df4deb97fca6eb7edc168c60c3f5a417de918291c7ef356884b52392433"
+        },
+        {
+          "active_lines": 75966,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "62d9026af664b4a07af577fb75882bfaaae82686246be5531d48a255fb93f741"
         }
       ],
-      "sha256": "b4797df4deb97fca6eb7edc168c60c3f5a417de918291c7ef356884b52392433"
+      "sha256": "62d9026af664b4a07af577fb75882bfaaae82686246be5531d48a255fb93f741"
     },
     "EasyPrivacy": {
-      "active_lines": 56499,
+      "active_lines": 56589,
       "history": [
         {
           "active_lines": 56494,
@@ -256,9 +301,14 @@
           "active_lines": 56499,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "120810cd0e1d0292c1aac59a9923e25e43b8c77f70e782a152915601bba35815"
+        },
+        {
+          "active_lines": 56589,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "55b2befe88b35c88898df24ee584f42651ee2d90bb49e43b614a071d10cd13ba"
         }
       ],
-      "sha256": "120810cd0e1d0292c1aac59a9923e25e43b8c77f70e782a152915601bba35815"
+      "sha256": "55b2befe88b35c88898df24ee584f42651ee2d90bb49e43b614a071d10cd13ba"
     },
     "Fuck Fuckadblock (legacy reference)": {
       "active_lines": 125,
@@ -281,6 +331,11 @@
         {
           "active_lines": 125,
           "observed_at_utc": "2026-11-08T17:55:46Z",
+          "sha256": "13f2d9a8ccefe6360c8eb06607834e16efd557879938aaecf561c9de2f7576b3"
+        },
+        {
+          "active_lines": 125,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
           "sha256": "13f2d9a8ccefe6360c8eb06607834e16efd557879938aaecf561c9de2f7576b3"
         }
       ],
@@ -308,6 +363,11 @@
           "active_lines": 151,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "36696f15616fdfa02551dc8436de3be1b7f37d012183b751ffe9a8ea65d6d9dd"
+        },
+        {
+          "active_lines": 151,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "36696f15616fdfa02551dc8436de3be1b7f37d012183b751ffe9a8ea65d6d9dd"
         }
       ],
       "sha256": "36696f15616fdfa02551dc8436de3be1b7f37d012183b751ffe9a8ea65d6d9dd"
@@ -333,6 +393,11 @@
         {
           "active_lines": 1110,
           "observed_at_utc": "2026-11-08T17:55:46Z",
+          "sha256": "e66849f583ee98a0d8aa775100b4aa4fbf50a8327976c17768dc02c8e8bac7f2"
+        },
+        {
+          "active_lines": 1110,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
           "sha256": "e66849f583ee98a0d8aa775100b4aa4fbf50a8327976c17768dc02c8e8bac7f2"
         }
       ],
@@ -360,6 +425,11 @@
           "active_lines": 1519,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "6fb6e5b802533b9560a3cbdddbb34a8b38519ebef9ae935750e2f143fef3350d"
+        },
+        {
+          "active_lines": 1519,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "6fb6e5b802533b9560a3cbdddbb34a8b38519ebef9ae935750e2f143fef3350d"
         }
       ],
       "sha256": "6fb6e5b802533b9560a3cbdddbb34a8b38519ebef9ae935750e2f143fef3350d"
@@ -386,6 +456,11 @@
           "active_lines": 18763,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "f8a2ee8dac8da40c1edcf9b2323c94e66acfd9a898d98a9517e5af2d6e6ab809"
+        },
+        {
+          "active_lines": 18763,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "f8a2ee8dac8da40c1edcf9b2323c94e66acfd9a898d98a9517e5af2d6e6ab809"
         }
       ],
       "sha256": "f8a2ee8dac8da40c1edcf9b2323c94e66acfd9a898d98a9517e5af2d6e6ab809"
@@ -406,6 +481,11 @@
         {
           "active_lines": 634928,
           "observed_at_utc": "2026-11-08T17:55:46Z",
+          "sha256": "123ff52f447f1a0837d19b792eea186e82f46328a59d91c45c3c66cf01af2ae0"
+        },
+        {
+          "active_lines": 634928,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
           "sha256": "123ff52f447f1a0837d19b792eea186e82f46328a59d91c45c3c66cf01af2ae0"
         }
       ],
@@ -433,6 +513,11 @@
           "active_lines": 225344,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "5d1922350a8f322bf4fc9ce72a9571a9fdb530daa302671e1266511cf285b23c"
+        },
+        {
+          "active_lines": 225344,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "5d1922350a8f322bf4fc9ce72a9571a9fdb530daa302671e1266511cf285b23c"
         }
       ],
       "sha256": "5d1922350a8f322bf4fc9ce72a9571a9fdb530daa302671e1266511cf285b23c"
@@ -458,6 +543,11 @@
         {
           "active_lines": 1441295,
           "observed_at_utc": "2026-11-08T17:55:46Z",
+          "sha256": "1999bba25d773fe92c2948bbbf798ee177e9e061f5d6d3a6dcdfa3ced0c0f572"
+        },
+        {
+          "active_lines": 1441295,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
           "sha256": "1999bba25d773fe92c2948bbbf798ee177e9e061f5d6d3a6dcdfa3ced0c0f572"
         }
       ],
@@ -485,6 +575,11 @@
           "active_lines": 188782,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "fef24fc32d6875421f432c0743e3ab6338142196da3beb927f6a53226f385cd8"
+        },
+        {
+          "active_lines": 188782,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "fef24fc32d6875421f432c0743e3ab6338142196da3beb927f6a53226f385cd8"
         }
       ],
       "sha256": "fef24fc32d6875421f432c0743e3ab6338142196da3beb927f6a53226f385cd8"
@@ -511,12 +606,17 @@
           "active_lines": 316,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "72fd0dda718ffcfd8fab8b416290c7feb8bd65efe060b17d30265a57cb51a649"
+        },
+        {
+          "active_lines": 316,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "72fd0dda718ffcfd8fab8b416290c7feb8bd65efe060b17d30265a57cb51a649"
         }
       ],
       "sha256": "72fd0dda718ffcfd8fab8b416290c7feb8bd65efe060b17d30265a57cb51a649"
     },
     "OISD Big": {
-      "active_lines": 232115,
+      "active_lines": 231845,
       "history": [
         {
           "active_lines": 232156,
@@ -537,9 +637,14 @@
           "active_lines": 232115,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "14c088fc2dd92ff8696580aa4a48f9bc67292bc326dbdbfadc51755e84271662"
+        },
+        {
+          "active_lines": 231845,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "c7d79d3fbeb2019dd366a249ce7bf4a64dc2be6a60c10ed2d528663728cfbad5"
         }
       ],
-      "sha256": "14c088fc2dd92ff8696580aa4a48f9bc67292bc326dbdbfadc51755e84271662"
+      "sha256": "c7d79d3fbeb2019dd366a249ce7bf4a64dc2be6a60c10ed2d528663728cfbad5"
     },
     "OpenPhish Community URL Indicators (health only)": {
       "active_lines": 300,
@@ -563,9 +668,14 @@
           "active_lines": 300,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "6367fdc36ab6847faa0409e6dfbcad22f0df16cf9cd330f51f492d15fab2da2a"
+        },
+        {
+          "active_lines": 300,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "437e1cfdd53756b8fa93b61c88e8f9831eb8c254e84099aad0d8244253a5dcb6"
         }
       ],
-      "sha256": "6367fdc36ab6847faa0409e6dfbcad22f0df16cf9cd330f51f492d15fab2da2a"
+      "sha256": "437e1cfdd53756b8fa93b61c88e8f9831eb8c254e84099aad0d8244253a5dcb6"
     },
     "Peter Lowe Ad Servers": {
       "active_lines": 3560,
@@ -589,12 +699,17 @@
           "active_lines": 3560,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "68fd03880a70202368484e675c3989b0519b0c019af664f9676ab17cc302e708"
+        },
+        {
+          "active_lines": 3560,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "68fd03880a70202368484e675c3989b0519b0c019af664f9676ab17cc302e708"
         }
       ],
       "sha256": "68fd03880a70202368484e675c3989b0519b0c019af664f9676ab17cc302e708"
     },
     "Phishing Army Community Phishing List": {
-      "active_lines": 144591,
+      "active_lines": 144137,
       "history": [
         {
           "active_lines": 145239,
@@ -615,12 +730,17 @@
           "active_lines": 144591,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "f7774d1e9f6415914b57c9a0159e123df317b1476e6ec98ad9f96cf903f14964"
+        },
+        {
+          "active_lines": 144137,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "6b738a90c5b751226262677a04c764d517dbc6de8bef68801f7c31a94d4f1824"
         }
       ],
-      "sha256": "f7774d1e9f6415914b57c9a0159e123df317b1476e6ec98ad9f96cf903f14964"
+      "sha256": "6b738a90c5b751226262677a04c764d517dbc6de8bef68801f7c31a94d4f1824"
     },
     "ShadowWhisperer Ads Domains": {
-      "active_lines": 29263,
+      "active_lines": 29268,
       "history": [
         {
           "active_lines": 28685,
@@ -641,12 +761,17 @@
           "active_lines": 29263,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "202b1dce9a34880a7a306a4c2e1ff5adb8cd5976a1800a03820e7344e925dbd1"
+        },
+        {
+          "active_lines": 29268,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "0f9aeecdc7edd6592dc1ef768b5303e4140b3de8fec44e640f26a01ca050a47a"
         }
       ],
-      "sha256": "202b1dce9a34880a7a306a4c2e1ff5adb8cd5976a1800a03820e7344e925dbd1"
+      "sha256": "0f9aeecdc7edd6592dc1ef768b5303e4140b3de8fec44e640f26a01ca050a47a"
     },
     "ShadowWhisperer Tracking Domains": {
-      "active_lines": 142188,
+      "active_lines": 142278,
       "history": [
         {
           "active_lines": 121075,
@@ -667,9 +792,14 @@
           "active_lines": 142188,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "246860d99675f1505286799e559ebe74f960b2d120a2bce4514bfa94a948ceec"
+        },
+        {
+          "active_lines": 142278,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "d1dba622ed4022b243cfe0b74eb55ff1d70090e5e9a1976d852dc1f31e36f3bd"
         }
       ],
-      "sha256": "246860d99675f1505286799e559ebe74f960b2d120a2bce4514bfa94a948ceec"
+      "sha256": "d1dba622ed4022b243cfe0b74eb55ff1d70090e5e9a1976d852dc1f31e36f3bd"
     },
     "uBlock Origin Badware Risks": {
       "active_lines": 4883,
@@ -693,12 +823,17 @@
           "active_lines": 4883,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "bd4c978eb09947ad9f08b6b659cab42297a0f04d9a4f5215a8ef5fe1a77194d6"
+        },
+        {
+          "active_lines": 4883,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "bd4c978eb09947ad9f08b6b659cab42297a0f04d9a4f5215a8ef5fe1a77194d6"
         }
       ],
       "sha256": "bd4c978eb09947ad9f08b6b659cab42297a0f04d9a4f5215a8ef5fe1a77194d6"
     },
     "uBlock Origin Quick Fixes": {
-      "active_lines": 451,
+      "active_lines": 450,
       "history": [
         {
           "active_lines": 451,
@@ -719,9 +854,14 @@
           "active_lines": 451,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "785ca7b89c69437dfcbd00673e573db9be63a95eb011d9d3350c524d351ce547"
+        },
+        {
+          "active_lines": 450,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "fff520f1bcff660a33e2328433e8cd5cff1d9ceeb05e048ad2c49737b2721900"
         }
       ],
-      "sha256": "785ca7b89c69437dfcbd00673e573db9be63a95eb011d9d3350c524d351ce547"
+      "sha256": "fff520f1bcff660a33e2328433e8cd5cff1d9ceeb05e048ad2c49737b2721900"
     },
     "uBlock Origin Resource Abuse": {
       "active_lines": 78,
@@ -744,6 +884,11 @@
         {
           "active_lines": 78,
           "observed_at_utc": "2026-11-08T17:55:46Z",
+          "sha256": "26758d49f533218b559207724a3d294d1fa74e36cdce080999bc1b7f96ad552a"
+        },
+        {
+          "active_lines": 78,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
           "sha256": "26758d49f533218b559207724a3d294d1fa74e36cdce080999bc1b7f96ad552a"
         }
       ],
@@ -771,6 +916,11 @@
           "active_lines": 968,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "f65542c4ee26e41ac60c49445b8e9bae1aa9d94dbe8f7b7a5447ba4e382c90ee"
+        },
+        {
+          "active_lines": 968,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "f65542c4ee26e41ac60c49445b8e9bae1aa9d94dbe8f7b7a5447ba4e382c90ee"
         }
       ],
       "sha256": "f65542c4ee26e41ac60c49445b8e9bae1aa9d94dbe8f7b7a5447ba4e382c90ee"
@@ -797,6 +947,11 @@
           "active_lines": 525,
           "observed_at_utc": "2026-11-08T17:55:46Z",
           "sha256": "b7f8b964c65dc60fa7cac6f15b3b71eb971fde465831b16835fd464d19f78faa"
+        },
+        {
+          "active_lines": 525,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
+          "sha256": "b7f8b964c65dc60fa7cac6f15b3b71eb971fde465831b16835fd464d19f78faa"
         }
       ],
       "sha256": "b7f8b964c65dc60fa7cac6f15b3b71eb971fde465831b16835fd464d19f78faa"
@@ -822,6 +977,11 @@
         {
           "active_lines": 64,
           "observed_at_utc": "2026-11-08T17:55:46Z",
+          "sha256": "50d7b900dfcb3079d616bafc849f151aa9ca6ae2b303839ca49b01cbedd223a2"
+        },
+        {
+          "active_lines": 64,
+          "observed_at_utc": "2026-11-09T06:24:24Z",
           "sha256": "50d7b900dfcb3079d616bafc849f151aa9ca6ae2b303839ca49b01cbedd223a2"
         }
       ],
