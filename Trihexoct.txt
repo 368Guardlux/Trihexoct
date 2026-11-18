@@ -7,7 +7,7 @@
 ! Automation: GitHub Actions checks 32 approved references every 12 hours with concurrent bounded retries.
 ! Adaptation: conservative exact/domain/parameter overlap checks; rolling-median source anomaly gates; atomic output publication.
 ! Scope: network rules are third-party scoped; functional auth/session/redirect/deep-link parameters are not removed.
-! Build mode: ONLINE RECONCILIATION — every configured reference feed passed validation.
+! Build mode: PARTIAL ONLINE RECONCILIATION — some optional reference feeds were unavailable; see build report.
 ! Not a malware scanner or guarantee of website compatibility. Keep Brave security features and maintained filters enabled.
 ! -----------------------------------------------------------------------------
 ! GENERATED FILE — edit src/modules/*.txt, then run tools/build_filter.py.
@@ -224,6 +224,7 @@
 ! Every rule is third-party scoped. Maintained feeds may cover many of these already.
 ||adbeam.com^$third-party
 ||adpath.net^$third-party
+||bidadx.com^$third-party
 ||openadstream.com^$third-party
 ||roxot.com^$third-party
 ||simulmedia.com^$third-party

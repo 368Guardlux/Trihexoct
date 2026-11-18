@@ -1,9 +1,11 @@
 {
-  "added_count": 0,
-  "added_examples": [],
-  "candidate_active_rules": 316,
-  "changed_count": 0,
-  "changed_ratio": 0.0,
+  "added_count": 1,
+  "added_examples": [
+    "||bidadx.com^$third-party"
+  ],
+  "candidate_active_rules": 317,
+  "changed_count": 1,
+  "changed_ratio": 0.0032,
   "gate_applied": true,
   "gate_passed": true,
   "manual_override_used": false,
